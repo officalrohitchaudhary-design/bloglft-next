@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bloglft - Start Earning with Your Blog in 24 Hours | 10+ Years Experience",
+  title: "bvoom - Start Earning with Your Blog in 24 Hours | 10+ Years Experience",
   description: "People in India are earning lakhs every month with blogging. We build your earning-ready blog in 24 hours — backed by 10+ years of blogging experience. Premium blog setup at ₹4,999.",
+  verification: {
+    google: "0R0qzrgWFsCvlV7T2orjvYFXu8KYAzv_KrxMUmHBmpM",
+  },
 };
 
 export default function RootLayout({

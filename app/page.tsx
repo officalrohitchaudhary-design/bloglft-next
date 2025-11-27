@@ -4,150 +4,45 @@ import { useState } from "react";
 import Image from "next/image";
 import { FaChartLine, FaMoneyBillWave, FaHandshake, FaArrowTrendUp, FaRegClock, FaRegCircleCheck, FaRegCircleXmark, FaArrowRight, FaMobileScreen, FaGaugeHigh, FaServer, FaHeadset, FaRocket, FaWandMagicSparkles, FaGlobe, FaPenNib, FaCheck, FaXmark, FaTwitter, FaInstagram, FaLinkedin, FaYoutube, FaPlay } from "react-icons/fa6";
 import { HiOutlineLink, HiOutlineCog6Tooth, HiOutlineRocketLaunch, HiOutlineCurrencyRupee, HiOutlineUserGroup } from "react-icons/hi2";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
 
-function Header() {
-  const [open, setOpen] = useState(false);
-
-  const links = [
-    { href: "#trust", label: "Why Us" },
-    { href: "#what-is", label: "What You Get" },
-    { href: "#pricing", label: "Pricing" },
-    { href: "#contact", label: "Contact" },
-  ];
-
-  const toggle = () => setOpen((prev) => !prev);
-  const close = () => setOpen(false);
+function GetStartedModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  if (!isOpen) return null;
 
   return (
-    <>
-      <header className="fixed top-0 left-0 right-0 z-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="mt-4 flex items-center justify-between rounded-2xl border border-slate-200/70 bg-white/80 px-4 py-3 shadow-sm backdrop-blur-xl sm:px-6">
-            {/* Logo */}
-            <a href="#top" className="flex items-center gap-2" onClick={close}>
-              <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#68b13d] text-lg font-black text-white shadow-lg shadow-green-500/20">
-                B
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="text-base font-extrabold tracking-tight text-slate-900 sm:text-lg">
-                  Bloglft
-                </span>
-                <span className="text-[10px] font-medium text-slate-500 sm:text-xs">
-                  Blog Launch Studio
-                </span>
-              </div>
-            </a>
-
-            {/* Desktop Nav */}
-            <nav className="hidden items-center gap-8 text-sm font-bold text-slate-600 md:flex">
-              {links.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="transition-colors hover:text-[#68b13d]"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-
-            {/* Desktop CTA */}
-            <a
-              href="#pricing"
-              className="hidden items-center gap-2 rounded-full bg-[#68b13d] px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-green-600/20 transition-all hover:bg-[#5a9a33] hover:scale-105 md:inline-flex"
-            >
-              Start Now
-              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </a>
-
-            {/* Mobile Burger */}
-            <button
-              type="button"
-              onClick={toggle}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:bg-slate-50 md:hidden"
-              aria-label="Toggle navigation"
-            >
-              <span className="relative block h-4 w-5">
-                <span
-                  className={`absolute left-0 top-0 h-0.5 w-full transform rounded-full bg-slate-900 transition-transform duration-200 ${
-                    open ? "translate-y-1.5 rotate-45" : ""
-                  }`}
-                />
-                <span
-                  className={`absolute left-0 top-1.5 h-0.5 w-full transform rounded-full bg-slate-900 transition-opacity duration-150 ${
-                    open ? "opacity-0" : "opacity-100"
-                  }`}
-                />
-                <span
-                  className={`absolute left-0 top-3 h-0.5 w-full transform rounded-full bg-slate-900 transition-transform duration-200 ${
-                    open ? "-translate-y-1.5 -rotate-45" : ""
-                  }`}
-                />
-              </span>
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Mobile Menu Overlay */}
-      <div
-        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-200 md:hidden ${
-          open ? "opacity-100 pointer-events-auto" : "pointer-events-none opacity-0"
-        }`}
-        onClick={close}
-      >
-        <div
-          className={`absolute right-0 top-0 h-full w-72 max-w-full transform bg-slate-950 p-6 text-white shadow-2xl transition-transform duration-200 ${
-            open ? "translate-x-0" : "translate-x-full"
-          }`}
-          onClick={(e) => e.stopPropagation()}
+    <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 sm:px-6">
+      {/* Backdrop */}
+      <div 
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" 
+        onClick={onClose}
+      />
+      
+      {/* Modal Content */}
+      <div className="relative w-full max-w-lg transform overflow-hidden rounded-3xl bg-white p-6 text-left shadow-2xl transition-all sm:p-8 md:p-10 animate-in fade-in zoom-in duration-200">
+        
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute right-4 top-4 p-2 rounded-full bg-slate-50 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors z-10"
         >
-          <div className="mb-8 flex items-center justify-between">
-            <span className="text-lg font-extrabold tracking-tight">Bloglft</span>
-            <button
-              type="button"
-              onClick={close}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
-              aria-label="Close navigation"
-            >
-              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <nav className="space-y-4 text-base font-semibold">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="block rounded-xl px-3 py-2 hover:bg-white/5"
-                onClick={close}
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-          <div className="mt-8">
-            <a
-              href="#pricing"
-              onClick={close}
-              className="flex w-full items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-bold text-slate-900 hover:bg-slate-100"
-            >
-              Start My Blog Now
-            </a>
-          </div>
-        </div>
+           <FaXmark className="h-5 w-5" />
+        </button>
+
+        <ContactForm onClose={onClose} isInModal={true} />
       </div>
-    </>
+    </div>
   );
 }
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen overflow-x-hidden font-sans" style={{background: '#ffffff'}}>
 
+      <GetStartedModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header />
       {/* SECTION 1 — HERO (Clean & Modern Design) */}
       <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 md:pt-32 md:pb-20 px-4 sm:px-6 overflow-hidden bg-white">
@@ -941,9 +836,12 @@ export default function Home() {
                    <div className="text-5xl md:text-6xl font-black text-slate-900 mb-1 md:mb-2">₹4,999</div>
                    <div className="text-green-600 font-bold text-xs md:text-sm mb-6 md:mb-8">Save ₹7,500 (60% OFF)</div>
                    
-                   <a href="#contact" className="w-full block bg-[#68b13d] text-white font-bold text-lg md:text-xl py-4 md:py-5 rounded-xl shadow-xl shadow-green-600/20 hover:bg-[#5a9a33] transition-all transform hover:-translate-y-1">
+                   <button
+                      onClick={() => setIsModalOpen(true)}
+                      className="w-full block bg-[#68b13d] text-white font-bold text-lg md:text-xl py-4 md:py-5 rounded-xl shadow-xl shadow-green-600/20 hover:bg-[#5a9a33] transition-all transform hover:-translate-y-1"
+                   >
                       Get Started Now
-                   </a>
+                   </button>
                    
                    <p className="text-[10px] md:text-xs text-slate-400 mt-4 md:mt-6 flex items-center gap-1">
                       <FaRegClock /> Offer valid for limited slots only
@@ -957,60 +855,7 @@ export default function Home() {
 
 
 
-      {/* Footer */}
-      <footer className="bg-black text-white py-20 px-4 overflow-hidden relative">
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col items-center justify-center mb-20">
-            {/* Brand Logo */}
-            <div className="text-3xl font-black tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-              Bloglft.
-            </div>
-
-            {/* Social Icons */}
-            <div className="flex gap-6">
-                <a 
-                  href="#" 
-                className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#1DA1F2] transition-all duration-300 group"
-                aria-label="Twitter"
-              >
-                <FaTwitter className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </a>
-              <a 
-                href="#" 
-                className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#E1306C] transition-all duration-300 group"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </a>
-              <a 
-                href="#" 
-                className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#0077B5] transition-all duration-300 group"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </a>
-              <a 
-                href="#" 
-                className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#FF0000] transition-all duration-300 group"
-                aria-label="YouTube"
-              >
-                <FaYoutube className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </a>
-            </div>
-          </div>
-
-          {/* Big Text Bottom */}
-          <div className="border-t border-white/10 pt-20">
-            <h2 className="text-[12vw] leading-none font-black text-center tracking-tighter text-white/5 hover:text-white/10 transition-colors duration-500 select-none cursor-default">
-              BUILD WITH BLOGLFT
-            </h2>
-          </div>
-          
-          <div className="text-center text-slate-500 text-sm mt-8">
-            &copy; {new Date().getFullYear()} Bloglft. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
