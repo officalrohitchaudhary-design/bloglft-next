@@ -55,7 +55,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-bold text-slate-900">Email</h3>
                   <p className="text-slate-500">Drop us a line anytime.</p>
-                  <a href="mailto:hello@bloglft.com" className="text-blue-600 font-bold hover:underline">contact@blogvoom.com</a>
+                  <a href="mailto:hello@blogvoom.in" className="text-blue-600 font-bold hover:underline">contact@blogvoom.in</a>
                 </div>
               </div>
 

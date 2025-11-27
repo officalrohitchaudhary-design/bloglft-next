@@ -71,3 +71,15 @@
 [00:35:42.496] Server  LOG      ✓ Compiled in 15ms
 [00:35:55.040] Server  LOG      ✓ Compiled in 17ms
 [01:09:58.035] Server  LOG      ✓ Compiled in 37ms
+[01:28:38.727] Server  LOG      ✓ Compiled in 16ms
+[01:28:56.584] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:28:56.584] Browser WARN    Image with src "http://localhost:3000/images/smallsvg.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:28:56.584] Browser WARN    Image with src "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:56.697] Browser WARN    Image with src "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:56.697] Browser WARN    Image with src "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:29:13.874] Server  LOG      ✓ Compiled in 28ms
+[01:30:02.170] Server  LOG      ✓ Compiled in 18ms
+[01:30:52.754] Server  LOG      ✓ Compiled in 30ms
+[01:31:23.054] Server  LOG      ✓ Compiled in 18ms
+[01:31:45.427] Server  LOG      ✓ Compiled in 11ms
+[01:32:03.704] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

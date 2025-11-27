@@ -301,7 +301,45 @@ function Footer() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "text-3xl font-black tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400",
-                            children: "Bloglft."
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                width: "220",
+                                height: "60",
+                                viewBox: "0 0 220 60",
+                                fill: "none",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                                        width: "60",
+                                        height: "60",
+                                        rx: "8",
+                                        fill: "red"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/Footer.tsx",
+                                        lineNumber: 16,
+                                        columnNumber: 1
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M28.78 22.24C29.14 21.84 29.94 21.32 31.18 20.68C32.46 20.04 33.8 19.72 35.2 19.72C36.64 19.72 38 19.94 39.28 20.38C40.6 20.82 41.88 21.54 43.12 22.54C44.4 23.5 45.42 24.98 46.18 26.98C46.98 28.98 47.38 31.36 47.38 34.12C47.38 39.16 46.24 43 43.96 45.64C41.68 48.28 38.76 49.6 35.2 49.6C31.64 49.6 28.76 48.16 26.56 45.28C26.52 45.2 26.48 45.14 26.44 45.1L25.42 49H16.42L14.8 10.06H28.48L28 23.2C28.16 22.96 28.42 22.64 28.78 22.24ZM31.42 27.76C28.78 27.76 27.46 30.16 27.46 34.96C27.46 36.6 27.76 38.08 28.36 39.4C29 40.68 29.9 41.32 31.06 41.32C32.22 41.32 33.1 40.88 33.7 40C34.3 39.12 34.66 38.28 34.78 37.48C34.9 36.68 34.96 35.84 34.96 34.96C34.96 30.16 33.78 27.76 31.42 27.76Z",
+                                        fill: "white"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/Footer.tsx",
+                                        lineNumber: 17,
+                                        columnNumber: 1
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M82.356 34.372C85.6813 29.9253 87.344 23.9707 87.344 16.508H96.682C96.682 21.7667 95.9473 26.3873 94.478 30.37C93.086 34.1207 91.5587 37.0787 89.896 39.244C88.3107 41.332 87.0733 42.7627 86.184 43.536L85.546 44H73.946L65.42 16.508H79.862L82.356 34.372ZM103.458 41.158C100.674 38.838 99.282 35.1647 99.282 30.138C99.282 25.1113 100.674 21.4573 103.458 19.176C106.281 16.856 110.031 15.696 114.71 15.696C119.389 15.696 123.12 16.856 125.904 19.176C128.727 21.4573 130.138 25.1113 130.138 30.138C130.138 35.1647 128.727 38.838 125.904 41.158C123.12 43.4393 119.389 44.58 114.71 44.58C110.031 44.58 106.281 43.4393 103.458 41.158ZM112.274 23.584C111.81 24.8987 111.578 27.0833 111.578 30.138C111.578 33.1927 111.81 35.3967 112.274 36.75C112.738 38.0647 113.55 38.722 114.71 38.722C115.87 38.722 116.682 38.0647 117.146 36.75C117.61 35.3967 117.842 33.1927 117.842 30.138C117.842 27.0833 117.61 24.8987 117.146 23.584C116.682 22.2307 115.87 21.554 114.71 21.554C113.55 21.554 112.738 22.2307 112.274 23.584ZM137.216 41.158C134.432 38.838 133.04 35.1647 133.04 30.138C133.04 25.1113 134.432 21.4573 137.216 19.176C140.039 16.856 143.789 15.696 148.468 15.696C153.147 15.696 156.878 16.856 159.662 19.176C162.485 21.4573 163.896 25.1113 163.896 30.138C163.896 35.1647 162.485 38.838 159.662 41.158C156.878 43.4393 153.147 44.58 148.468 44.58C143.789 44.58 140.039 43.4393 137.216 41.158ZM146.032 23.584C145.568 24.8987 145.336 27.0833 145.336 30.138C145.336 33.1927 145.568 35.3967 146.032 36.75C146.496 38.0647 147.308 38.722 148.468 38.722C149.628 38.722 150.44 38.0647 150.904 36.75C151.368 35.3967 151.6 33.1927 151.6 30.138C151.6 27.0833 151.368 24.8987 150.904 23.584C150.44 22.2307 149.628 21.554 148.468 21.554C147.308 21.554 146.496 22.2307 146.032 23.584ZM208.906 15.696C212.038 15.696 214.358 16.9333 215.866 19.408C217.374 21.8827 218.128 24.86 218.128 28.34C218.128 31.7813 217.683 37.0013 216.794 44H206.644L205.368 30.544C205.136 28.224 204.826 26.6773 204.44 25.904C204.053 25.1307 203.396 24.744 202.468 24.744C200.264 24.744 199.026 26.6967 198.756 30.602L197.77 44H187.446L186.17 30.544C185.938 28.224 185.628 26.6773 185.242 25.904C184.855 25.1307 184.198 24.744 183.27 24.744C180.988 24.744 179.751 26.6967 179.558 30.602L178.978 44H168.306L167.088 16.508H180.196L179.964 22.018C180.041 21.8633 180.138 21.6507 180.254 21.38C180.408 21.0707 180.756 20.5487 181.298 19.814C181.878 19.0793 182.516 18.4413 183.212 17.9C183.908 17.3587 184.855 16.856 186.054 16.392C187.291 15.928 188.606 15.696 189.998 15.696C192.24 15.696 194.058 16.4113 195.45 17.842C196.88 19.2727 197.808 20.858 198.234 22.598C198.814 21.6313 199.316 20.858 199.742 20.278C200.167 19.698 200.805 19.002 201.656 18.19C203.396 16.5273 205.812 15.696 208.906 15.696Z",
+                                        fill: "#fff"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/Footer.tsx",
+                                        lineNumber: 18,
+                                        columnNumber: 1
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/components/Footer.tsx",
+                                lineNumber: 15,
+                                columnNumber: 11
+                            }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/components/Footer.tsx",
                             lineNumber: 13,
@@ -318,12 +356,12 @@ function Footer() {
                                         className: "w-5 h-5 group-hover:scale-110 transition-transform"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Footer.tsx",
-                                        lineNumber: 24,
+                                        lineNumber: 29,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Footer.tsx",
-                                    lineNumber: 19,
+                                    lineNumber: 24,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -334,12 +372,12 @@ function Footer() {
                                         className: "w-5 h-5 group-hover:scale-110 transition-transform"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Footer.tsx",
-                                        lineNumber: 31,
+                                        lineNumber: 36,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Footer.tsx",
-                                    lineNumber: 26,
+                                    lineNumber: 31,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -350,12 +388,12 @@ function Footer() {
                                         className: "w-5 h-5 group-hover:scale-110 transition-transform"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Footer.tsx",
-                                        lineNumber: 38,
+                                        lineNumber: 43,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Footer.tsx",
-                                    lineNumber: 33,
+                                    lineNumber: 38,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -366,18 +404,18 @@ function Footer() {
                                         className: "w-5 h-5 group-hover:scale-110 transition-transform"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Footer.tsx",
-                                        lineNumber: 45,
+                                        lineNumber: 50,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Footer.tsx",
-                                    lineNumber: 40,
+                                    lineNumber: 45,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/Footer.tsx",
-                            lineNumber: 18,
+                            lineNumber: 23,
                             columnNumber: 11
                         }, this)
                     ]
@@ -393,12 +431,12 @@ function Footer() {
                         children: "BUILD WITH BVOOM"
                     }, void 0, false, {
                         fileName: "[project]/app/components/Footer.tsx",
-                        lineNumber: 52,
+                        lineNumber: 57,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/components/Footer.tsx",
-                    lineNumber: 51,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -410,7 +448,7 @@ function Footer() {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/Footer.tsx",
-                    lineNumber: 57,
+                    lineNumber: 62,
                     columnNumber: 9
                 }, this)
             ]
@@ -931,7 +969,7 @@ function AboutPage() {
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "text-slate-500 font-bold",
-                                                        children: "Bloglft Launch"
+                                                        children: "BlogVoom Launch"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/about/page.tsx",
                                                         lineNumber: 120,
@@ -950,7 +988,7 @@ function AboutPage() {
                                                     children: [
                                                         "Introducing ",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                            children: "Bloglft"
+                                                            children: "BlogVoom"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/about/page.tsx",
                                                             lineNumber: 123,
