@@ -59,10 +59,12 @@ export default function Home() {
             {/* Trust Badge - Premium Pill Design */}
             <div className="inline-flex items-center gap-3 px-4 py-2 md:px-5 md:py-2.5 rounded-full bg-white/80 border border-[#68b13d]/20 shadow-sm backdrop-blur-sm hover:border-[#68b13d]/40 transition-colors cursor-default max-w-full overflow-hidden">
               <div className="flex -space-x-3 flex-shrink-0">
-                {[1, 2, 3].map((i) => (
+                {["/images/men1.png", "/images/women1.png", "/images/men2.jpg"].map((url, i) => (
                   <div key={i} className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center overflow-hidden relative">
-                     <div className={`absolute inset-0 bg-gradient-to-br from-[#68b13d] to-[#4d8a2a] opacity-${100 - (i * 20)}`}></div>
-              </div>
+                     <div className={`absolute inset-0 bg-gradient-to-br from-[#68b13d] to-[#4d8a2a] opacity-${100 - (i * 20)}`}>
+                        <Image src={url} alt="Background Glow" width={100} height={100} className="w-full h-full object-cover" />
+                     </div>
+                  </div>
                 ))}
               </div>
               <div className="flex flex-col items-start text-left leading-none truncate">
@@ -251,8 +253,10 @@ export default function Home() {
               <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-slate-100">
                  <div className="flex items-center gap-4">
                     <div className="flex -space-x-2 md:-space-x-3">
-                       {[1,2,3,4].map(i => (
-                          <div key={i} className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white bg-slate-200"></div>
+                       {['/images/men1.png', '/images/women1.png', '/images/men2.jpg','/images/women2.png'].map(i => (
+                          <div key={i} className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center overflow-hidden relative">
+                            <Image src={i} alt="Background Glow" width={100} height={100} className="w-full h-full object-cover" />
+                          </div>
                        ))}
                       </div>
                     <div className="text-xs md:text-sm">
