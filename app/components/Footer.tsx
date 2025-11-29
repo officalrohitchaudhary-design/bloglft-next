@@ -1,8 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import { FaCheck, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa6";
+import { FaFacebook, FaInstagram } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -22,32 +20,22 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex gap-6">
             <a 
-              href="#" 
-              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#1DA1F2] transition-all duration-300 group"
-              aria-label="Twitter"
+              href="https://www.facebook.com/share/1BXSbXjQHA/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#1877F2] transition-all duration-300 group"
+              aria-label="Facebook"
             >
-              <FaTwitter className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <FaFacebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
             <a 
-              href="#" 
+              href="https://www.instagram.com/blogvoom?igsh=cGN3dDRhN3hla3Ay" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#E1306C] transition-all duration-300 group"
               aria-label="Instagram"
             >
               <FaInstagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            </a>
-            <a 
-              href="#" 
-              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#0077B5] transition-all duration-300 group"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            </a>
-            <a 
-              href="#" 
-              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#FF0000] transition-all duration-300 group"
-              aria-label="YouTube"
-            >
-              <FaYoutube className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
           </div>
         </div>

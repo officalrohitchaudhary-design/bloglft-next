@@ -7,7 +7,7 @@ import { HiOutlineLink, HiOutlineCog6Tooth, HiOutlineRocketLaunch, HiOutlineCurr
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
-
+// https://blogvoom-backend.onrender.com
 function GetStartedModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   if (!isOpen) return null;
 
@@ -364,7 +364,7 @@ export default function Home() {
                       Market Opportunity
                    </span>
                    <h3 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 leading-tight">
-                      2025 is the <br/>
+                      2026 is the <br/>
                       <span className="text-[#68b13d]">Golden Era</span>
                    </h3>
                    <p className="text-slate-400 text-base md:text-lg mb-8 md:mb-10 leading-relaxed">

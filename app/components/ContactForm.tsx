@@ -35,10 +35,28 @@ export default function ContactForm({ onSuccess, onClose, isInModal = false }: C
     validationSchema,
     onSubmit: (values) => {
       // Simulate API call
-      setTimeout(() => {
+      fetch("https://blogvoom-backend.onrender.com/leads/create", {
+        method: "POST",
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          mobile: values.mobile,
+          description: values.description,
+        }),
+      }).then(res => res.json()).then(data => {
+        if(data.status === 'active'){
         setIsSubmitted(true);
         if (onSuccess) onSuccess();
-      }, 1000);
+        }
+      }).catch(err => {
+        console.log(err);
+        setIsSubmitted(false);
+        if (onClose) onClose();
+      });
+      // setTimeout(() => {
+      //   setIsSubmitted(true);
+      //   if (onSuccess) onSuccess();
+      // }, 1000);
     },
   });
 
