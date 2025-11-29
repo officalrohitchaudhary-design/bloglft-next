@@ -486,6 +486,9 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                 // Simulate API call
                 fetch("https://blogvoom-backend.onrender.com/leads/create", {
                     method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
                     body: JSON.stringify({
                         name: values.name,
                         email: values.email,
@@ -525,12 +528,12 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                         className: "h-10 w-10"
                     }, void 0, false, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 67,
+                        lineNumber: 70,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/components/ContactForm.tsx",
-                    lineNumber: 66,
+                    lineNumber: 69,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -538,7 +541,7 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                     children: "Thank You!"
                 }, void 0, false, {
                     fileName: "[project]/app/components/ContactForm.tsx",
-                    lineNumber: 69,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -547,7 +550,7 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                         "We have received your details. ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/app/components/ContactForm.tsx",
-                            lineNumber: 71,
+                            lineNumber: 74,
                             columnNumber: 42
                         }, this),
                         "Our team will connect with you within ",
@@ -556,14 +559,14 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                             children: "24 hours"
                         }, void 0, false, {
                             fileName: "[project]/app/components/ContactForm.tsx",
-                            lineNumber: 72,
+                            lineNumber: 75,
                             columnNumber: 49
                         }, this),
                         "."
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/ContactForm.tsx",
-                    lineNumber: 70,
+                    lineNumber: 73,
                     columnNumber: 9
                 }, this),
                 isInModal && onClose && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -572,13 +575,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                     children: "Close"
                 }, void 0, false, {
                     fileName: "[project]/app/components/ContactForm.tsx",
-                    lineNumber: 75,
+                    lineNumber: 78,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/components/ContactForm.tsx",
-            lineNumber: 65,
+            lineNumber: 68,
             columnNumber: 7
         }, this);
     }
@@ -592,7 +595,7 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                         children: "Get Started"
                     }, void 0, false, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 89,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -600,13 +603,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                         children: "Fill in your details below to kickstart your blogging journey."
                     }, void 0, false, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 90,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/ContactForm.tsx",
-                lineNumber: 88,
+                lineNumber: 91,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -625,13 +628,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                         children: "*"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/ContactForm.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 101,
                                         columnNumber: 18
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 97,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -642,7 +645,7 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                 placeholder: "Enter your full name"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 100,
+                                lineNumber: 103,
                                 columnNumber: 11
                             }, this),
                             formik.touched.name && formik.errors.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -650,7 +653,7 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaRegCircleXmark"], {}, void 0, false, {
                                         fileName: "[project]/app/components/ContactForm.tsx",
-                                        lineNumber: 113,
+                                        lineNumber: 116,
                                         columnNumber: 15
                                     }, this),
                                     " ",
@@ -658,13 +661,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 112,
+                                lineNumber: 115,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 96,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -679,13 +682,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                         children: "(Optional)"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/ContactForm.tsx",
-                                        lineNumber: 120,
+                                        lineNumber: 123,
                                         columnNumber: 27
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 119,
+                                lineNumber: 122,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -696,7 +699,7 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                 placeholder: "john@example.com"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 122,
+                                lineNumber: 125,
                                 columnNumber: 11
                             }, this),
                             formik.touched.email && formik.errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -704,7 +707,7 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaRegCircleXmark"], {}, void 0, false, {
                                         fileName: "[project]/app/components/ContactForm.tsx",
-                                        lineNumber: 135,
+                                        lineNumber: 138,
                                         columnNumber: 15
                                     }, this),
                                     " ",
@@ -712,13 +715,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 134,
+                                lineNumber: 137,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 118,
+                        lineNumber: 121,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -733,13 +736,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                         children: "*"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/ContactForm.tsx",
-                                        lineNumber: 142,
+                                        lineNumber: 145,
                                         columnNumber: 27
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 141,
+                                lineNumber: 144,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -750,7 +753,7 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                         children: "+91"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/ContactForm.tsx",
-                                        lineNumber: 145,
+                                        lineNumber: 148,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -762,13 +765,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                         maxLength: 10
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/ContactForm.tsx",
-                                        lineNumber: 148,
+                                        lineNumber: 151,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 144,
+                                lineNumber: 147,
                                 columnNumber: 11
                             }, this),
                             formik.touched.mobile && formik.errors.mobile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -776,7 +779,7 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaRegCircleXmark"], {}, void 0, false, {
                                         fileName: "[project]/app/components/ContactForm.tsx",
-                                        lineNumber: 163,
+                                        lineNumber: 166,
                                         columnNumber: 15
                                     }, this),
                                     " ",
@@ -784,13 +787,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 162,
+                                lineNumber: 165,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 140,
+                        lineNumber: 143,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -805,13 +808,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                         children: "(Optional)"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/ContactForm.tsx",
-                                        lineNumber: 170,
+                                        lineNumber: 173,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 169,
+                                lineNumber: 172,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -822,13 +825,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                                 placeholder: "Tell us about your blog idea..."
                             }, void 0, false, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 172,
+                                lineNumber: 175,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 168,
+                        lineNumber: 171,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -838,13 +841,13 @@ function ContactForm({ onSuccess, onClose, isInModal = false }) {
                         children: formik.isSubmitting ? "Processing..." : "Submit Request"
                     }, void 0, false, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 181,
+                        lineNumber: 184,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/ContactForm.tsx",
-                lineNumber: 95,
+                lineNumber: 98,
                 columnNumber: 7
             }, this)
         ]

@@ -37,6 +37,9 @@ export default function ContactForm({ onSuccess, onClose, isInModal = false }: C
       // Simulate API call
       fetch("https://blogvoom-backend.onrender.com/leads/create", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
           name: values.name,
           email: values.email,
