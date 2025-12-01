@@ -35,7 +35,8 @@ export default function ContactForm({ onSuccess, onClose, isInModal = false }: C
     validationSchema,
     onSubmit: (values) => {
       // Simulate API call
-      fetch("https://blogvoom-backend.onrender.com/leads/create", {
+      // fetch("https://blogvoom-backend.onrender.com/leads/create", {
+      fetch("https://blogvoom.zeabur.app/leads/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
