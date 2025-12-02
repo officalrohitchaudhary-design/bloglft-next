@@ -50,6 +50,12 @@ export default function Footer() {
         <div className="text-center text-slate-500 text-sm mt-8">
           &copy; {new Date().getFullYear()} BlogVoom. All rights reserved.
         </div>
+        
+        <div className="text-center text-slate-400 text-sm mt-4 flex items-center justify-center gap-2">
+          <span>I love</span>
+          <span className="text-red-500">❤️</span>
+          <span>Bangalore</span>
+        </div>
       </div>
     </footer>
   );

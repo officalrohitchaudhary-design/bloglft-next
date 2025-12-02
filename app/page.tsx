@@ -604,9 +604,10 @@ export default function Home() {
                      <div className="text-sm text-slate-400">Average Rating</div>
                   </div>
                   <div className="flex -space-x-4">
-                     {[1,2,3,4].map(i => (
+                     {['/images/w4.webp', '/images/w3.webp', '/images/w7.webp'].map(i => (
                         <div key={i} className="w-12 h-12 rounded-full border-2 border-[#050505] bg-slate-800 relative overflow-hidden">
-                           <div className={`absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-900`}></div>
+                           {/* <div className={`absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-900`}></div> */}
+                           <Image src={i} alt="Client" fill className="object-cover" />
                         </div>
                      ))}
                      <div className="w-12 h-12 rounded-full border-2 border-[#050505] bg-[#68b13d] flex items-center justify-center text-white font-bold text-xs">
@@ -621,10 +622,11 @@ export default function Home() {
                {[
                   {
                      name: "Rahul Sharma",
-                     role: "Tech Reviewer",
-                     earnings: "₹45,000",
+                     role: "Fitness Blogger",
+                     earnings: "₹80,000",
                      period: "per month",
-                     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                     // image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                     image: "/images/w4.webp",
                      quote: "I replaced my salary in 3 months."
                   },
                   {
@@ -632,7 +634,8 @@ export default function Home() {
                      role: "Food Blogger",
                      earnings: "₹82,000",
                      period: "per month",
-                     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                     // image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                     image: "/images/w3.webp",
                      quote: "Brands now pay me to post recipes."
                   },
                   {
@@ -640,7 +643,8 @@ export default function Home() {
                      role: "Crypto Analyst",
                      earnings: "₹1.2 Lakh",
                      period: "per month",
-                     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                     // image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                     image: "/images/w7.webp",
                      quote: "My traffic doubled after the redesign."
                   }
                ].map((client, i) => (
@@ -659,11 +663,11 @@ export default function Home() {
                      </div>
 
                      {/* Play Button (Centered) */}
-                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 transform group-hover:scale-110 transition-transform duration-300">
+                     {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 transform group-hover:scale-110 transition-transform duration-300">
                         <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#68b13d] group-hover:border-[#68b13d] transition-colors shadow-[0_0_40px_rgba(0,0,0,0.5)]">
                            <FaPlay className="ml-1 text-2xl" />
                         </div>
-                     </div>
+                     </div> */}
 
                      {/* Content Content (Bottom) */}
                      <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10 z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
