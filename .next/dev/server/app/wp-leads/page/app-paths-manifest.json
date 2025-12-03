@@ -1,4 +1,3 @@
 {
-  "/page": "app/page.js",
   "/wp-leads/page": "app/wp-leads/page.js"
 }
