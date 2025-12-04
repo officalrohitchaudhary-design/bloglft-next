@@ -84,8 +84,8 @@ export default function Home() {
               </span>
               </span>
               <span className="block text-lg sm:text-2xl md:text-4xl font-medium text-slate-500 mt-6 md:mt-8 max-w-3xl mx-auto leading-relaxed">
-                Start earning in just <span className="font-black text-slate-900 relative inline-block">
-                  1 Hour
+                Start earning with <span className="font-black text-slate-900 relative inline-block">
+                  Google Ads
                   <svg className="absolute -bottom-1 md:-bottom-2 left-0 w-full h-2 md:h-3 text-[#68b13d]" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
                   </svg>
@@ -99,7 +99,7 @@ export default function Home() {
                 href="#pricing"
                 className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 bg-[#68b13d] text-white font-bold text-lg md:text-xl px-8 py-4 md:px-10 md:py-5 rounded-full transition-all transform hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(104,177,61,0.5)] overflow-hidden"
               >
-                <span className="relative z-10">Start My Blog Now</span>
+                <span className="relative z-10">Start Now</span>
                 <svg className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -112,7 +112,6 @@ export default function Home() {
                  <span>No Credit Card Required</span>
               </div>
             </div>
-
           </div>
         </div>
       </section>

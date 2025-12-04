@@ -63,6 +63,15 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   type __Unused = __Check
 }
 
+// Validate ../../../app/v2/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/v2">> = Specific
+  const handler = {} as typeof import("../../../app/v2/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/wp-leads/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/wp-leads">> = Specific

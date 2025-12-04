@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///home/softradix/Documents/Data/next/bloglft-next/app/v2/page.tsx"],"sourcesContent":["export default function V2() {\n  return (\n    <div>\n      <h1>V2</h1>\n    </div>\n  )\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8RAAC;kBACC,cAAA,8RAAC;sBAAG;;;;;;;;;;;AAGV"}}]
+}
