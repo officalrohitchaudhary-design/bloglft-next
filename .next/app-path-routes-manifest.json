@@ -7,5 +7,6 @@
   "/page": "/",
   "/sitemap.xml/route": "/sitemap.xml",
   "/v2/page": "/v2",
+  "/v3/page": "/v3",
   "/wp-leads/page": "/wp-leads"
 }

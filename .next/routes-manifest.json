@@ -70,6 +70,12 @@
       "namedRegex": "^/v2(?:/)?$"
     },
     {
+      "page": "/v3",
+      "regex": "^/v3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/v3(?:/)?$"
+    },
+    {
       "page": "/wp-leads",
       "regex": "^/wp\\-leads(?:/)?$",
       "routeKeys": {},
