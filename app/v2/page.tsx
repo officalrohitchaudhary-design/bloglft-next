@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaBolt, FaWandMagicSparkles, FaArrowTrendUp, FaUserCheck, FaFingerprint, FaCheck, FaRegClock, FaXmark } from "react-icons/fa6";
+import { FaBolt, FaWandMagicSparkles, FaArrowTrendUp, FaUserCheck, FaFingerprint, FaCheck, FaRegClock, FaXmark, FaPalette, FaMobileScreen, FaMagnifyingGlass, FaGoogle, FaChartSimple, FaMoneyBillWave, FaFileLines, FaShareNodes, FaWhatsapp, FaServer, FaGlobe } from "react-icons/fa6";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
@@ -340,24 +340,24 @@ export default function V2() {
                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-8">What You Get Today:</h3>
                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8">
                       {[
-                         "Premium Blog Design",
-                         "Mobile Responsive Layout",
-                         "SEO Optimization Setup",
-                         "Google Search Console",
-                         "Google Analytics",
-                         "AdSense Ready Structure",
-                         "Essential Pages (About, Contact)",
-                         "Speed Optimization",
-                         "Social Media Integration",
-                         "WhatsApp Support Access",
-                         "Hosting Setup Guide",
-                         "Domain Connection"
-                         ].map((feature, i) => (
-                            <div key={i} className="flex items-center gap-3">
-                            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-[#68b13d] flex items-center justify-center text-xs font-bold">
-                               <FaCheck />
+                         { icon: FaPalette, text: "Premium Blog Design" },
+                         { icon: FaMobileScreen, text: "Mobile Responsive Layout" },
+                         { icon: FaMagnifyingGlass, text: "SEO Optimization Setup" },
+                         { icon: FaGoogle, text: "Google Search Console" },
+                         { icon: FaChartSimple, text: "Google Analytics" },
+                         { icon: FaMoneyBillWave, text: "AdSense Ready Structure" },
+                         { icon: FaFileLines, text: "Essential Pages (About, Contact)" },
+                         { icon: FaBolt, text: "Speed Optimization" },
+                         { icon: FaShareNodes, text: "Social Media Integration" },
+                         { icon: FaWhatsapp, text: "WhatsApp Support Access" },
+                         { icon: FaServer, text: "Hosting Setup Guide" },
+                         { icon: FaGlobe, text: "Domain Connection" }
+                         ].map((item, i) => (
+                            <div key={i} className="flex items-center gap-3 group hover:bg-slate-50 p-2 rounded-lg transition-colors">
+                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-[#68b13d] flex items-center justify-center text-sm font-bold group-hover:scale-110 transition-transform">
+                               <item.icon />
                             </div>
-                            <span className="text-slate-600 font-medium text-sm">{feature}</span>
+                            <span className="text-slate-600 font-medium text-sm">{item.text}</span>
                             </div>
                          ))}
                       </div>
@@ -533,7 +533,7 @@ export default function V2() {
                          <div>
                             <div className="font-bold text-slate-900 text-base md:text-lg">{stat.title}</div>
                             <div className="text-xs md:text-sm text-slate-500">{stat.trend}</div>
-                      </div>
+                         </div>
                          <div className={`font-black text-lg md:text-xl ${stat.color}`}>{stat.status}</div>
                    </div>
                    ))}
@@ -600,24 +600,24 @@ export default function V2() {
                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-8">What You Get Today:</h3>
                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8">
                       {[
-                         "Premium Blog Design",
-                         "Mobile Responsive Layout",
-                         "SEO Optimization Setup",
-                         "Google Search Console",
-                         "Google Analytics",
-                         "AdSense Ready Structure",
-                         "Essential Pages (About, Contact)",
-                         "Speed Optimization",
-                         "Social Media Integration",
-                         "WhatsApp Support Access",
-                         "Hosting Setup Guide",
-                         "Domain Connection"
-                         ].map((feature, i) => (
+                         { icon: FaPalette, text: "Premium Blog Design" },
+                         { icon: FaMobileScreen, text: "Mobile Responsive Layout" },
+                         { icon: FaMagnifyingGlass, text: "SEO Optimization Setup" },
+                         { icon: FaGoogle, text: "Google Search Console" },
+                         { icon: FaChartSimple, text: "Google Analytics" },
+                         { icon: FaMoneyBillWave, text: "AdSense Ready Structure" },
+                         { icon: FaFileLines, text: "Essential Pages (About, Contact)" },
+                         { icon: FaBolt, text: "Speed Optimization" },
+                         { icon: FaShareNodes, text: "Social Media Integration" },
+                         { icon: FaWhatsapp, text: "WhatsApp Support Access" },
+                         { icon: FaServer, text: "Hosting Setup Guide" },
+                         { icon: FaGlobe, text: "Domain Connection" }
+                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-3">
                             <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-[#68b13d] flex items-center justify-center text-xs font-bold">
-                               <FaCheck />
+                               <item.icon />
                             </div>
-                            <span className="text-slate-600 font-medium text-sm">{feature}</span>
+                            <span className="text-slate-600 font-medium text-sm">{item.text}</span>
                             </div>
                          ))}
                       </div>
