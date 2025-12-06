@@ -8,11 +8,13 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { href: "/#trust", label: "Why Us" },
+    // { href: "/#trust", label: "Why Us" },
     // { href: "/#what-is", label: "What You Get" },
-    { href: "/#pricing", label: "Pricing" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    // { href: "/#pricing", label: "Pricing" },
+    // { href: "/about", label: "About" },
+    // { href: "/contact", label: "Contact" },
+    { href: "/about", label: "हमारे बारे में" },
+    { href: "/contact", label: "संपर्क करें" },
   ];
 
   const toggle = () => setOpen((prev) => !prev);
@@ -125,7 +127,8 @@ export default function Header() {
               onClick={close}
               className="flex w-full items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-bold text-slate-900 hover:bg-slate-100"
             >
-              Start My Blog Now
+              {/* Start My Blog Now */}
+              अभी शुरू करें
             </Link>
           </div>
         </div>
