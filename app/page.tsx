@@ -53,7 +53,7 @@ export default function Home() {
           <div className="absolute top-[30%] -left-[10%] w-[600px] h-[600px] rounded-full bg-[#68b13d]/10 blur-[120px]"></div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-5xl z-10">
+        <div className="relative mx-auto w-full max-w-6xl z-10">
           <div className="text-center space-y-8 md:space-y-14">
             
             {/* Trust Badge - Premium Pill Design */}
@@ -79,9 +79,9 @@ export default function Home() {
                 Launch Your Own
               </span>
               <span className="block text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] md:leading-[0.95]">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#68b13d] via-[#5a9a33] to-[#4d8a2a]">
-                Money-Making Blog
-              </span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#68b13d] via-[#5a9a33] to-[#4d8a2a] text-[31px] sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] md:leading-[0.95]">
+                  Money-Making Website
+                </span>
               </span>
               <span className="block text-lg sm:text-2xl md:text-4xl font-medium text-slate-500 mt-6 md:mt-8 max-w-3xl mx-auto leading-relaxed">
                 Start earning with <span className="font-black text-slate-900 relative inline-block">
@@ -99,7 +99,7 @@ export default function Home() {
                 href="#pricing"
                 className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 bg-[#68b13d] text-white font-bold text-lg md:text-xl px-8 py-4 md:px-10 md:py-5 rounded-full transition-all transform hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(104,177,61,0.5)] overflow-hidden"
               >
-                <span className="relative z-10">Start Now</span>
+                <span className="relative z-10">Get website </span>
                 <svg className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
