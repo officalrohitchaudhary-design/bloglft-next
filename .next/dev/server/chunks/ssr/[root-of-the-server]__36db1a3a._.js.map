@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/rohit/Documents/workspace/app/bloglft-next/app/v3/page.tsx"],"sourcesContent":["function V3() {\n    return (\n        <div>\n            <h1>V3</h1>\n        </div>\n    )\n}\n\nexport default V3;"],"names":[],"mappings":";;;;;;AAAA,SAAS;IACL,qBACI,8OAAC;kBACG,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGhB;uCAEe"}}]
-}
