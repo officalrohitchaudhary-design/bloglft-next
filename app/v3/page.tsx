@@ -451,7 +451,7 @@ export default function V3() {
                 <FaWhatsapp className="text-3xl" />
                 <span>Chat on WhatsApp</span>
               </a>
-              <p className="text-white/70 text-xs mt-3 font-medium">Typically replies in &lt; 1 mins</p>
+              <p className="text-white/70 text-xs mt-3 font-medium">Typically replies in &lt; 2 mins</p>
             </div>
 
           </div>
