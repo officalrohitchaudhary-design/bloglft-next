@@ -1,8 +1,8 @@
 "use client";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import ContactForm from "../components/ContactForm";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import ContactForm from "../../components/ContactForm";
 import { FaEnvelope, FaWhatsapp, FaLocationDot } from "react-icons/fa6";
 
 export default function ContactPage() {
@@ -17,9 +17,9 @@ export default function ContactPage() {
             <div className="absolute bottom-[20%] right-[20%] w-[500px] h-[500px] bg-[#68b13d]/10 rounded-full blur-[120px]"></div>
          </div>
          <div className="relative z-10">
-            <h1 className="text-4xl md:text-6xl font-black mb-4">संपर्क करें (Contact Us)</h1>
+            <h1 className="text-4xl md:text-6xl font-black mb-4">Contact Us</h1>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              कोई सवाल है? हम आपकी ब्लॉगिंग यात्रा शुरू करने में मदद करने के लिए यहाँ हैं।
+              Have questions? We're here to help you start your blogging journey.
             </p>
          </div>
       </div>
@@ -30,9 +30,9 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div className="lg:col-span-5 space-y-8">
             <div>
-              <h2 className="text-3xl font-black text-slate-900 mb-6">हमसे जुड़ें</h2>
+              <h2 className="text-3xl font-black text-slate-900 mb-6">Get in Touch</h2>
               <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                चाहे आपके पास हमारी कीमत के बारे में कोई सवाल हो, डेमो चाहिए हो, या कुछ और, हमारी टीम आपके सभी सवालों के जवाब देने के लिए तैयार है।
+                Whether you have a question about our pricing, need a demo, or anything else, our team is ready to answer all your questions.
               </p>
             </div>
 
@@ -53,8 +53,8 @@ export default function ContactPage() {
                   <FaEnvelope />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900">ईमेल (Email)</h3>
-                  <p className="text-slate-500">हमें कभी भी लिखें।</p>
+                  <h3 className="text-lg font-bold text-slate-900">Email</h3>
+                  <p className="text-slate-500">Drop us a line anytime.</p>
                   <a href="mailto:hello@blogvoom.in" className="text-blue-600 font-bold hover:underline">contact@blogvoom.in</a>
                 </div>
               </div>

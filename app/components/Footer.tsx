@@ -29,7 +29,7 @@ export default function Footer() {
               <FaFacebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
             <a 
-              href="https://www.instagram.com/blogvoom?igsh=cGN3dDRhN3hla3Ay" 
+              href="https://www.instagram.com/teambvoom?igsh=MTNhb21pZGlhOHZ6Yg==" 
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#E1306C] transition-all duration-300 group"

@@ -20,7 +20,7 @@ function GetStartedModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
       />
       
       {/* Modal Content */}
-      <div className="relative w-full max-w-lg transform overflow-hidden rounded-3xl bg-white p-6 text-left shadow-2xl transition-all sm:p-8 md:p-10 animate-in fade-in zoom-in duration-200">
+      <div className="relative w-full max-w-lg transform overflow-hidden rounded-3xl bg-white p-6 text-left shadow-2xl transition-all sm:p-8 animate-in fade-in zoom-in duration-200">
         
         {/* Close Button */}
         <button
@@ -30,7 +30,68 @@ function GetStartedModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
            <FaXmark className="h-5 w-5" />
         </button>
 
-        <ContactForm onClose={onClose} isInModal={true} />
+        {/* Earn First Pay Later Content */}
+        <div className="text-center">
+            
+            {/* Animated Icon */}
+            <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg shadow-indigo-500/30 transform rotate-3 hover:rotate-6 transition-transform">
+               <FaRocket className="text-4xl text-white" />
+            </div>
+
+            <div className="inline-block bg-yellow-100 text-yellow-800 font-bold px-3 py-1 rounded-full text-xs mb-4 uppercase tracking-wider">
+                Limited Time Launch Offer
+            </div>
+
+            <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-2 leading-tight">
+                पहले कमाओ <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">बाद में पैसे दो</span>
+            </h3>
+            
+            <p className="text-slate-600 font-medium text-sm md:text-base leading-relaxed mt-4 mb-8 max-w-sm mx-auto">
+                पहले वेबसाइट लॉन्च करो, जब पैसा आना शुरू हो जाएगा <br/>
+                तब बाद में <span className="text-slate-900 font-black">₹4999</span> दे देना। <br/>
+                <span className="block mt-2 text-indigo-600 font-bold">
+                   अभी सिर्फ ₹199 में Starter Pack जॉइन करें (14 Days Refundable)
+                </span>
+            </p>
+
+            {/* Value Stack */}
+            <div className="bg-slate-50 rounded-2xl p-5 mb-8 text-left border border-slate-100">
+               <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">You Get Instantly:</div>
+               <ul className="space-y-3">
+                  {[
+                     "30-Min Strategy Call (Value ₹2000)",
+                     "Niche Selection Guide (Value ₹1000)",
+                     "Website Roadmap (Value ₹1500)",
+                     "Guaranteed 80% Discount"
+                  ].map((item, i) => (
+                     <li key={i} className="flex items-center gap-3 text-sm font-bold text-slate-700">
+                        <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs">
+                           <FaCheck />
+                        </div>
+                        {item}
+                     </li>
+                  ))}
+               </ul>
+            </div>
+
+            {/* Big CTA */}
+            <a 
+               href="https://wa.me/6284563903?text=I%20want%20to%20join%20Starter%20Pack%20for%20199"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="w-full block bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-black text-lg py-4 rounded-xl shadow-xl shadow-indigo-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all relative overflow-hidden group"
+            >
+               <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out"></div>
+               <span className="relative z-10 flex items-center justify-center gap-2">
+                  <FaWhatsapp className="text-2xl" />
+                  Join Starter Pack @ ₹199
+               </span>
+            </a>
+
+            <p className="text-xs text-slate-400 mt-4">
+               100% Refundable if you don't like the plan.
+            </p>
+        </div>
       </div>
     </div>
   );
@@ -140,7 +201,7 @@ export default function V3() {
         </div>
       </section>
 
-
+        
       {/* SECTION — SIMPLE STEPS (Easy to understand points) */}
       <section className="py-16 md:py-24 px-4 sm:px-6 bg-slate-50 border-y border-slate-200/60">
         <div className="max-w-5xl mx-auto">
@@ -194,21 +255,64 @@ export default function V3() {
                 icon: <FaHeadset />,
                 bg: "bg-rose-50",
                 color: "text-rose-600"
-              }
-            ].map((item, i) => (
+                  }
+               ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className={`shrink-0 w-12 h-12 rounded-xl ${item.bg} ${item.color} flex items-center justify-center text-xl`}>
-                  {item.icon}
+                        {item.icon}
                 </div>
                 <div>
                   <p className="text-slate-800 font-bold text-lg leading-tight pt-1">
                     {item.text}
                   </p>
-                </div>
-              </div>
-            ))}
-          </div>
+                      </div>
+                   </div>
+                ))}
+             </div>
 
+        </div>
+      </section>
+
+   {/* SECTION — CALENDLY CTA (Book Meeting) */}
+   <section className="py-8 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-[#006BFF] shadow-2xl shadow-blue-500/30 group hover:scale-[1.02] transition-transform duration-300">
+          
+          {/* Animated Background Pattern */}
+          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+          <div className="absolute -left-20 -top-20 w-64 h-64 bg-white/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+          
+          <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+            
+            {/* Text Content */}
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 text-white text-xs md:text-sm font-bold uppercase tracking-wider mb-4 border border-white/20">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                Video Call Available
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+                Face-to-Face <br/>
+                <span className="text-blue-100">Meeting Book करें</span>
+              </h2>
+              <p className="text-white/90 text-lg font-medium max-w-md mx-auto md:mx-0">
+                 सीधे हमारे एक्सपर्ट्स के साथ 1:1 वीडियो कॉल पर बात करें और अपने सारे सवाल पूछें।
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <div className="shrink-0">
+              <a 
+                href="https://calendly.com/singhmak305/30min" // Replace with actual Calendly link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-white text-[#006BFF] font-black text-xl px-8 py-5 rounded-2xl shadow-xl hover:bg-blue-50 transition-all transform group-hover:-translate-y-1"
+              >
+                <FaRegClock className="text-3xl" />
+                <span>Book Free Call</span>
+              </a>
+              <p className="text-white/70 text-xs mt-3 font-medium">15 min free consultation</p>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -342,12 +446,233 @@ export default function V3() {
          </div>
       </section>
 
-      {/* SECTION 6 — URGENCY (Reality Check Vibe) */}
-      <section className="py-16 md:py-32 px-4 sm:px-6 relative bg-white hidden">
-        <div className="max-w-7xl mx-auto relative z-10">
-           
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      {/* SECTION — EARN FIRST PAY LATER (New CTA) */}
+      <section className="py-8 px-4 sm:px-6">
+         <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-indigo-600 to-purple-700 shadow-2xl shadow-indigo-500/30 group hover:scale-[1.02] transition-transform duration-300">
+            
+            {/* Animated Background Pattern */}
+            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+            <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
+
+            <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+               
+               {/* Text Content */}
+               <div className="flex-1">
+                  <div className="inline-flex items-center gap-2 bg-yellow-400 text-yellow-900 rounded-full px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-wider mb-4 border border-yellow-300 shadow-lg animate-pulse">
+                     <span className="w-2 h-2 rounded-full bg-yellow-900"></span>
+                     Special Offer
+                  </div>
+                  <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+                     कमाई पहले, 
+                     <span className="text-yellow-400"> पेमेंट बाद में</span>
+                  </h2>
+                  <p className="text-indigo-100 text-lg font-medium max-w-xl mx-auto md:mx-0 leading-relaxed">
+                     वेबसाइट लॉन्च करने से पहले, हम आपको देते हैं <span className="text-white font-bold border-b border-yellow-400/50">30-मिनट का स्टार्टर एक्टिवेशन सेशन</span> — सिर्फ <span className="text-yellow-400 font-black text-2xl">₹199</span> में।
+                  </p>
+                  <p className="text-white/60 text-sm mt-4 italic">
+                     *सीखें कि कैसे आपकी वेबसाइट पहले दिन से ही कमाई के लिए तैयार होगी।
+                  </p>
+               </div>
+
+               {/* CTA Button */}
+               <div className="shrink-0 flex flex-col items-center">
+                  <a 
+                     href="https://wa.me/6284563903?text=I%20want%20Starter%20Activation%20Session%20for%20199" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="inline-flex items-center gap-3 bg-yellow-400 text-yellow-900 font-black text-xl px-8 py-5 rounded-2xl shadow-[0_10px_20px_rgba(250,204,21,0.3)] hover:bg-yellow-300 transition-all transform group-hover:-translate-y-1 relative overflow-hidden"
+                  >
+                     {/* Shine Effect */}
+                     <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent transform animate-[shimmer_2s_infinite]"></div>
+                     
+                     <FaRocket className="text-2xl" />
+                     <span>अभी बुक करें ₹199</span>
+                  </a>
+                  <p className="text-indigo-200 text-xs mt-3 font-medium">Limited slots available today</p>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <section className="py-16 md:py-32 px-4 sm:px-6 bg-white relative">
+  <div className="max-w-7xl mx-auto">
+    
+    {/* Section Header */}
+    <div className="text-center mx-auto mb-12 md:mb-20">
+      <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-4 md:mb-6 tracking-tight">
+      आपकी लाइफ का सबसे  <span className="text-[#68b13d] underline decoration-4 decoration-[#68b13d]/20 underline-offset-8">पावरफुल इनकम सोर्स</span>
+      </h2>
+      <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+      जब आप सो रहे होते हैं… तब भी जो कमाए—ऐसा डिजिटल एसेट बनाएं।
+      </p>
+    </div>
+
+    {/* Comparison & Opportunity Section */}
+    <div className="grid lg:grid-cols-12 gap-8 items-stretch">
+      
+      {/* Comparison Table */}
+      <div className="lg:col-span-7 bg-slate-50 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 border border-slate-100">
+        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 md:mb-10">ब्लॉगिंग वेबसाइट vs सोशल मीडिया (youtube)</h3>
+        <div className="space-y-4 md:space-y-6">
+          {[
+            { label: "चेहरा / कैमरा चाहिए?", blog: "नहीं", social: "हाँ" },
+            { label: "कंटेंट कितने समय तक चलता है?", blog: "सालों तक", social: "कुछ घंटे" },
+            { label: "कमाई के मौके", blog: "बहुत ज्यादा", social: "बहुत कम" },
+            { label: "ओनरशिप", blog: "100% आपकी", social: "प्लेटफॉर्म की" },
+            { label: "प्रतिस्पर्धा", blog: "कम", social: "बहुत ज्यादा" },
+          ].map((row, idx) => (
+            <div key={idx} className="flex items-center justify-between py-3 md:py-4 border-b border-slate-200 last:border-0">
+              <span className="font-bold text-slate-700 text-sm md:text-lg flex-1">{row.label}</span>
+              <div className="flex items-center gap-2 md:gap-8 text-right">
+                <div className="w-16 md:w-24 hidden sm:block">
+                  <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase block mb-1">सोशल मीडिया</span>
+                  <span className="font-bold text-red-500 bg-red-50 px-2 py-1 rounded-full text-xs md:text-sm">{row.social}</span>
+                </div>
+                <div className="w-20 md:w-24 border-l border-slate-200 pl-2 md:pl-8">
+                  <span className="text-[10px] md:text-xs font-bold text-[#68b13d] uppercase block mb-1">ब्लॉगिंग वेबसाइट</span>
+                  <span className="font-bold text-[#68b13d] bg-[#68b13d]/10 px-2 py-1 rounded-full text-xs md:text-sm">{row.blog}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Golden Era Callout */}
+      <div className="lg:col-span-5 bg-[#1a1a1a] rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden flex flex-col justify-center">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#68b13d] rounded-full blur-[100px] opacity-20"></div>
+        
+        <div className="relative z-10">
+          <span className="inline-block px-3 py-1 md:px-4 md:py-1 rounded-full bg-[#68b13d]/20 text-[#68b13d] font-bold text-[10px] md:text-xs uppercase tracking-wider mb-4 md:mb-6 border border-[#68b13d]/30">
+            मार्केट अवसर
+          </span>
+          <h3 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 leading-tight">
+            2026 ब्लॉगिंग का <br/>
+            <span className="text-[#68b13d]">सुनेहरा दौर है</span>
+          </h3>
+          <p className="text-slate-400 text-base md:text-lg mb-8 md:mb-10 leading-relaxed">
+            AI टूल्स और भारत में तेजी से बढ़ते इंटरनेट यूज़र्स की वजह से, आज ब्लॉग शुरू करना पहले से 10 गुना आसान और ज्यादा मुनाफ़ेदार है।
+          </p>
+          <a href="#pricing" className="inline-flex items-center gap-3 font-bold text-white group hover:text-[#68b13d] transition-colors">
+            अपनी ब्लॉगिंग वेबसाइट शुरू करें
+            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-[#68b13d] group-hover:text-white transition-all">
+              <FaArrowRight className="w-3 h-3 md:w-4 md:h-4" />
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+     {/* SECTION 7 — PRICING (No-Brainer Deal Vibe) */}
+<section id="pricing" className="py-16 md:py-32 px-4 sm:px-6 bg-[#f8f9fa] relative">
+  <div className="max-w-5xl mx-auto">
+
+    <div className="text-center mb-12 md:mb-16">
+      <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-4 md:mb-6">
+        एक ही कीमत। <span className="text-[#68b13d]">सब कुछ शामिल।</span>
+      </h2>
+      <p className="text-lg md:text-xl text-slate-600">
+        ना कोई मंथली फीस। ना कोई छिपा चार्ज। सिर्फ एक बार की स्मार्ट इन्वेस्टमेंट।
+      </p>
+    </div>
+
+    <div className="bg-white rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-slate-200 overflow-hidden relative">
+      <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#68b13d] via-[#8bc85a] to-[#68b13d]"></div>
+
+      <div className="grid md:grid-cols-12">
+
+        {/* LEFT SIDE */}
+        <div className="md:col-span-7 p-6 md:p-14 border-b md:border-b-0 md:border-r border-slate-100">
+          <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-8">आज आपको क्या-क्या मिलेगा:</h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8">
+            {[
+              "प्रीमियम ब्लॉग डिज़ाइन",
+              "मोबाइल रेस्पॉन्सिव लेआउट",
+              "SEO ऑप्टिमाइज़ेशन सेटअप",
+              "Google Search Console इंटीग्रेशन",
+              "Google Analytics सेटअप",
+              "AdSense-रेडी स्ट्रक्चर",
+              "ज़रूरी पेजेज (About, Contact)",
+              "स्पीड ऑप्टिमाइज़ेशन",
+              "सोशल मीडिया इंटीग्रेशन",
+              "WhatsApp सपोर्ट एक्सेस",
+              "होस्टिंग सेटअप गाइड",
+              "डोमेन कनेक्शन सपोर्ट"
+            ].map((feature, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-[#68b13d] flex items-center justify-center text-xs font-bold">
+                  <FaCheck />
+                </div>
+                <span className="text-slate-600 font-medium text-sm">{feature}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 md:mt-10 p-4 md:p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#68b13d]/10 flex items-center justify-center text-[#68b13d] text-xl md:text-2xl">
+                <FaHandshake />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 text-sm md:text-base">100% हैंड-होल्ड प्रोसेस</h4>
+                <p className="text-xs md:text-sm text-slate-500">टेक्निकल काम हम करते हैं। आप सिर्फ कंटेंट पर फोकस करें।</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT SIDE */}
+        <div className="md:col-span-5 p-8 md:p-14 bg-slate-50 flex flex-col justify-center items-center text-center relative overflow-hidden">
+          <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#68b13d]/10 rounded-full blur-3xl"></div>
+
+          <div className="inline-block bg-red-100 text-red-600 font-bold text-[10px] md:text-xs px-3 py-1 md:px-4 md:py-1 rounded-full uppercase tracking-wide mb-4 md:mb-6">
+            Limited Time Offer
+          </div>
+
+          <div className="relative group cursor-default">
+             <div className="mb-1 md:mb-2 text-slate-400 line-through text-lg md:text-xl font-semibold filter blur-[2px] opacity-50 group-hover:blur-0 transition-all duration-300">₹12,499</div>
+             <div className="text-5xl md:text-6xl font-black text-slate-900 mb-1 md:mb-2 filter blur-md group-hover:blur-0 transition-all duration-500 select-none">₹4,999</div>
              
+             {/* Overlay Text */}
+             <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none group-hover:opacity-0 transition-opacity duration-300">
+               <span className="bg-[red] text-white px-4 py-2 rounded-lg font-bold text-sm md:text-base shadow-lg transform rotate-[-5deg] ">
+                 पहले कमाओ — बाद में पैसे दो
+               </span>
+             </div>
+          </div>
+
+          <div className="text-green-600 font-bold text-xs md:text-sm mb-6 md:mb-8 mt-2">₹ 4999</div>
+
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="w-full block bg-[#68b13d] text-white font-bold text-lg md:text-xl py-4 md:py-5 rounded-xl shadow-xl shadow-green-600/20 hover:bg-[#5a9a33] transition-all transform hover:-translate-y-1 relative overflow-hidden group/btn"
+          >
+            <span className="relative z-10">अभी शुरू करें</span>
+            <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform group-hover/btn:translate-x-[200%] transition-transform duration-700 ease-in-out"></div>
+          </button>
+
+          <p className="text-[10px] md:text-xs text-slate-400 mt-4 md:mt-6 flex items-center gap-1">
+            <FaRegClock /> ऑफर सीमित स्लॉट्स के लिए ही उपलब्ध
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      {/* SECTION 6 — URGENCY (Reality Check Vibe) */}
+           <section className="py-16 md:py-32 px-4 sm:px-6 relative bg-white hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
              {/* Left: The Cost of Waiting */}
              <div className="relative">
                 <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 md:mb-8 leading-tight">
@@ -413,10 +738,9 @@ export default function V3() {
                          </div>
       </section>
 
-
-      {/* SECTION — WHATSAPP CTA (Instant Access) */}
-      <section className="py-16 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-[#25D366] shadow-2xl shadow-green-500/30 group hover:scale-[1.02] transition-transform duration-300">
+              {/* SECTION — WHATSAPP CTA (Instant Access) */}
+              <section className="py-16 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-[#25D366] shadow-2xl shadow-green-500/30 group hover:scale-[1.02] transition-transform duration-300">
           
           {/* Animated Background Pattern */}
           <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
@@ -426,10 +750,6 @@ export default function V3() {
             
             {/* Text Content */}
             <div className="flex-1">
-              {/* <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 text-white text-xs md:text-sm font-bold uppercase tracking-wider mb-4 border border-white/20">
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                Online Now
-              </div> */}
               <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
                  तुरंत जवाब 
                 <br/>
@@ -458,88 +778,6 @@ export default function V3() {
         </div>
       </section>
 
-      {/* SECTION 7 — PRICING (No-Brainer Deal Vibe) */}
-      {/* <section id="pricing" className="py-16 md:py-32 px-4 sm:px-6 bg-[#f8f9fa] relative">
-        <div className="max-w-5xl mx-auto">
-          
-          <div className="text-center mb-12 md:mb-16">
-             <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-4 md:mb-6">
-                One Price. <span className="text-[#68b13d]">Everything Included.</span>
-             </h2>
-             <p className="text-lg md:text-xl text-slate-600">No monthly fees. No hidden charges. Just a one-time investment.</p>
-                      </div>
-
-          <div className="bg-white rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-slate-200 overflow-hidden relative">
-             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#68b13d] via-[#8bc85a] to-[#68b13d]"></div>
-             
-             <div className="grid md:grid-cols-12">
-                
-                <div className="md:col-span-7 p-6 md:p-14 border-b md:border-b-0 md:border-r border-slate-100">
-                   <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-8">What You Get Today:</h3>
-                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8">
-                      {[
-                         "Premium Blog Design",
-                         "Mobile Responsive Layout",
-                         "SEO Optimization Setup",
-                         "Google Search Console",
-                         "Google Analytics",
-                         "AdSense Ready Structure",
-                         "Essential Pages (About, Contact)",
-                         "Speed Optimization",
-                         "Social Media Integration",
-                         "WhatsApp Support Access",
-                         "Hosting Setup Guide",
-                         "Domain Connection"
-                         ].map((feature, i) => (
-                            <div key={i} className="flex items-center gap-3">
-                            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-[#68b13d] flex items-center justify-center text-xs font-bold">
-                               <FaCheck />
-                            </div>
-                            <span className="text-slate-600 font-medium text-sm">{feature}</span>
-                            </div>
-                         ))}
-                      </div>
-
-                   <div className="mt-8 md:mt-10 p-4 md:p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                      <div className="flex items-center gap-4">
-                         <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#68b13d]/10 flex items-center justify-center text-[#68b13d] text-xl md:text-2xl">
-                            <FaHandshake />
-                      </div>
-                         <div>
-                            <h4 className="font-bold text-slate-900 text-sm md:text-base">100% Hand-Held Process</h4>
-                            <p className="text-xs md:text-sm text-slate-500">We do the technical work. You focus on content.</p>
-                         </div>
-                         </div>
-                         </div>
-                      </div>
-
-                <div className="md:col-span-5 p-8 md:p-14 bg-slate-50 flex flex-col justify-center items-center text-center relative overflow-hidden">
-                   <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#68b13d]/10 rounded-full blur-3xl"></div>
-                   
-                   <div className="inline-block bg-red-100 text-red-600 font-bold text-[10px] md:text-xs px-3 py-1 md:px-4 md:py-1 rounded-full uppercase tracking-wide mb-4 md:mb-6">
-                      Limited Time Offer
-                </div>
-
-                   <div className="mb-1 md:mb-2 text-slate-400 line-through text-lg md:text-xl font-semibold">₹12,499</div>
-                   <div className="text-5xl md:text-6xl font-black text-slate-900 mb-1 md:mb-2">₹4,999</div>
-                   <div className="text-green-600 font-bold text-xs md:text-sm mb-6 md:mb-8">Save ₹7,500 (60% OFF)</div>
-                   
-                   <button
-                      onClick={() => setIsModalOpen(true)}
-                      className="w-full block bg-[#68b13d] text-white font-bold text-lg md:text-xl py-4 md:py-5 rounded-xl shadow-xl shadow-green-600/20 hover:bg-[#5a9a33] transition-all transform hover:-translate-y-1"
-                   >
-                      Get Started Now
-                   </button>
-                   
-                   <p className="text-[10px] md:text-xs text-slate-400 mt-4 md:mt-6 flex items-center gap-1">
-                      <FaRegClock /> Offer valid for limited slots only
-                   </p>
-             </div>
-
-             </div>
-          </div>
-        </div>
-      </section> */}
       <Footer />
     </div>
   );
