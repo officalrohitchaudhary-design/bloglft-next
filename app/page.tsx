@@ -223,34 +223,40 @@ export default function V3() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                text: "हम आपके लिए पूरी वेबसाइट सेटअप कर देंगे",
+                text: "हम आपके लिए पूरी वेबसाइट बना कर दे देंगे",
                 icon: <FaWandMagicSparkles />,
                 bg: "bg-blue-50",
                 color: "text-blue-600"
               },
               {
-                text: "Google Ads से कमाई कैसे होती है, हम आपको समझाएँगे",
+               text: "अपनी वेबसाइट आप मोबाइल से ही संभाल सकते हैं (लैपटॉप की ज़रूरत नहीं)",
+               icon: <FaMobileScreen />,
+               bg: "bg-blue-50",
+               color: "text-blue-600"
+             },
+              {
+                text: "Google Ads(वेबसाइट) से कमाई कैसे होती है, हम आपको समझाएँगे",
                 icon: <FaMoneyBillWave />,
                 bg: "bg-green-50",
                 color: "text-green-600"
               },
               {
+               text: "घर बैठे… बैठे ऑनलाइन कमाई शुरू करें (सिर्फ रोज़ 20–30 मिनट काफी)",
+               icon: <FaHouseUser />,
+               bg: "bg-teal-50",
+               color: "text-teal-600"
+             },
+             {
+               text: "आपको किसी टेक्निकल नॉलेज की जरूरत नहीं",
+               icon: <FaRegCircleCheck />,
+               bg: "bg-orange-50",
+               color: "text-orange-600"
+             },
+              {
                 text: "SEO-फ्रेंडली और मोबाइल-फ्रेंडली ब्लॉग तैयार मिलेगा",
                 icon: <FaMobileScreen />,
                 bg: "bg-purple-50",
                 color: "text-purple-600"
-              },
-              {
-                text: "आपको किसी टेक्निकल नॉलेज की जरूरत नहीं",
-                icon: <FaRegCircleCheck />,
-                bg: "bg-orange-50",
-                color: "text-orange-600"
-              },
-              {
-                text: "कम निवेश में घर बैठे ऑनलाइन कमाई शुरू करें",
-                icon: <FaHouseUser />,
-                bg: "bg-teal-50",
-                color: "text-teal-600"
               },
               {
                 text: "लाइफटाइम सपोर्ट और गाइडेंस उपलब्ध",
@@ -484,49 +490,46 @@ export default function V3() {
       </section>
 
            {/* SECTION — EARN FIRST PAY LATER (New CTA) */}
-           <section className="py-8 px-4 sm:px-6">
-         <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-[#68b13d] shadow-2xl shadow-green-500/30 group hover:scale-[1.02] transition-transform duration-300">
+
+      {/* SECTION — SPECIAL OFFER CTA (Minimalist & Impactful) */}
+      <section className="py-8 px-4 sm:px-6">
+         <div className="max-w-4xl mx-auto text-center relative overflow-hidden rounded-[2rem] bg-[#68b13d] shadow-2xl shadow-green-600/30 group hover:scale-[1.01] transition-transform duration-300">
             
             {/* Animated Background Pattern */}
             <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-            <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] animate-pulse"></div>
 
-            <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+            <div className="relative z-10 p-10 md:p-16 flex flex-col items-center gap-6">
                
-               {/* Text Content */}
-               <div className="flex-1">
-                  <div className="inline-flex items-center gap-2 bg-white text-[#68b13d] rounded-full px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-wider mb-4 border border-white/20 shadow-lg animate-pulse">
-                     <span className="w-2 h-2 rounded-full bg-[#68b13d]"></span>
-                     Special Offer 
+               <div className="space-y-4">
+                  <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full border border-white/20">
+                     <span className="text-white text-xs font-bold uppercase tracking-widest">Limited Offer</span>
                   </div>
-                  {/* <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
-                     कमाई पहले, 
-                     <span className="text-slate-900 bg-white px-2 rounded-lg ml-2 inline-block transform -rotate-1"> पेमेंट बाद में</span>
-                  </h2> */}
-                  <p className="text-white text-lg font-medium max-w-xl mx-auto md:mx-0 leading-relaxed">
-                  {/* 30-मिनट का  */}
-                     वेबसाइट लॉन्च करने से पहले, हम आपको देते हैं <span className="text-white font-bold border-b border-white/50">स्टार्टर एक्टिवेशन सेशन</span> 
-                     {/* — सिर्फ <span className="bg-white text-[#68b13d] px-2 rounded font-black text-2xl">₹0</span> में। */}
-                  </p>
-                  <p className="text-white/80 text-sm mt-4 italic">
-                     *सीखें कि कैसे आपकी वेबसाइट पहले दिन से ही कमाई के लिए तैयार होगी।
+                  
+                  <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
+                  कभी-कभी एक फैसला  <br className="md:hidden" />
+                     <span className="text-yellow-300">ज़िंदगी बदल देता है</span>
+                  </h2>
+
+                  <p className="text-white/90 text-lg md:text-xl font-medium max-w-xl mx-auto">
+                  एक छोटा सा कदम… आपकी पूरी जिंदगी बदल सकता है।
                   </p>
                </div>
 
-               {/* CTA Button */}
-               <div className="shrink-0 flex flex-col items-center">
-                  <a 
-                     href="#pricing" 
-                     className="inline-flex items-center gap-3 bg-white text-[#68b13d] font-black text-xl px-8 py-5 rounded-2xl shadow-[0_10px_20px_rgba(255,255,255,0.2)] hover:bg-slate-50 transition-all transform group-hover:-translate-y-1 relative overflow-hidden"
-                  >
-                     {/* Shine Effect */}
-                     <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-slate-200/40 to-transparent transform animate-[shimmer_2s_infinite]"></div>
-                     
-                     <FaRocket className="text-2xl" />
-                     <span>अभी बुक करें</span>
-                  </a>
-                  <p className="text-white/90 text-xs mt-3 font-medium">Limited slots available today</p>
-               </div>
+               <a 
+                  href="#pricing" 
+                  className="group relative inline-flex items-center gap-3 bg-white text-[#68b13d] font-black text-xl px-10 py-5 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+               >
+                  <span>आज शुरू करें</span>
+                  <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  
+                  {/* Ripple Effect */}
+                  <span className="absolute -inset-2 rounded-full border-2 border-white/30 animate-ping opacity-75"></span>
+               </a>
+
+               <p className="text-white/60 text-sm font-medium">
+               शायद यही आपका टर्निंग पॉइंट हो
+               </p>
 
             </div>
          </div>
