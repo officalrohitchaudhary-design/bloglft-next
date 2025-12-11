@@ -348,7 +348,7 @@ export default function PricingPage() {
           <div className="relative w-full max-w-lg bg-white rounded-3xl p-8 shadow-2xl animate-in zoom-in-95 duration-300 overflow-hidden">
             
             <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-black text-slate-900">Demo Access Details</h2>
+                <h2 className="text-2xl font-black text-slate-900">Demo website and Admin panel Access Details</h2>
                 <button onClick={() => setShowFreePopup(false)} className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200">
                     ✕
                 </button>
@@ -357,12 +357,12 @@ export default function PricingPage() {
             <div className="space-y-6">
                 {/* Website Link */}
                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Indian Website Link</div>
+                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">blog Website Link</div>
                     <div className="flex items-center gap-3">
-                        <a href="https://demo-website.com" target="_blank" rel="noopener noreferrer" className="flex-1 text-blue-600 font-medium truncate hover:underline">
-                            https://demo-website.com
+                        <a href="https://blogfly-syhl.vercel.app" target="_blank" rel="noopener noreferrer" className="flex-1 text-blue-600 font-medium truncate hover:underline">
+                            https://blogfly-syhl.vercel.app
                         </a>
-                        <a href="https://demo-website.com" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-blue-600">
+                        <a href="https://blogfly-syhl.vercel.app" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-blue-600">
                             <FaExternalLinkAlt />
                         </a>
                     </div>
@@ -372,10 +372,10 @@ export default function PricingPage() {
                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
                     <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Admin Panel Link</div>
                     <div className="flex items-center gap-3">
-                        <a href="https://demo-admin.com" target="_blank" rel="noopener noreferrer" className="flex-1 text-blue-600 font-medium truncate hover:underline">
-                            https://demo-admin.com
+                        <a href="https://blogfly-syhl.vercel.app/login" target="_blank" rel="noopener noreferrer" className="flex-1 text-blue-600 font-medium truncate hover:underline">
+                            https://blogfly-syhl.vercel.app/login
                         </a>
-                        <a href="https://demo-admin.com" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-blue-600">
+                        <a href="https://blogfly-syhl.vercel.app/login" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-blue-600">
                             <FaExternalLinkAlt />
                         </a>
                     </div>
