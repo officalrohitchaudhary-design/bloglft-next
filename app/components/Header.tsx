@@ -15,6 +15,7 @@ export default function Header() {
     // { href: "/contact", label: "Contact" },
     { href: "/about", label: "हमारे बारे में" },
     { href: "/contact", label: "संपर्क करें" },
+    { href: "/pricing", label: "प्लान्स" },
   ];
 
   const toggle = () => setOpen((prev) => !prev);

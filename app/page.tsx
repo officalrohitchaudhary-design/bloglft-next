@@ -3,11 +3,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FaChartLine, FaMoneyBillWave, FaHandshake, FaArrowTrendUp, FaRegClock, FaRegCircleCheck, FaRegCircleXmark, FaArrowRight, FaMobileScreen, FaGaugeHigh, FaServer, FaHeadset, FaRocket, FaWandMagicSparkles, FaGlobe, FaPenNib, FaCheck, FaXmark, FaTwitter, FaInstagram, FaLinkedin, FaYoutube, FaPlay, FaHouseUser, FaWhatsapp } from "react-icons/fa6";
-import { HiOutlineLink, HiOutlineCog6Tooth, HiOutlineRocketLaunch, HiOutlineCurrencyRupee, HiOutlineUserGroup } from "react-icons/hi2";
+// import { HiOutlineLink, HiOutlineCog6Tooth, HiOutlineRocketLaunch, HiOutlineCurrencyRupee, HiOutlineUserGroup } from "react-icons/hi2";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 // import ContactForm from "./components/ContactForm";
 // https://blogvoom-backend.onrender.com
+import PricingPage from "./components/pricing";
+
 function GetStartedModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   if (!isOpen) return null;
 
@@ -89,7 +91,7 @@ function GetStartedModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
             </a>
 
             <p className="text-xs text-slate-400 mt-4">
-               100% Refundable if you don't like the plan.
+               100% Refundable if you don&apos;t like the plan.
             </p>
         </div>
       </div>
@@ -358,15 +360,13 @@ export default function V3() {
                </div>
             </div>
 
-            {/* Premium Video Grid */}
-            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {/* Premium Video Grid - Horizontal Scroll Snap on Mobile, Grid on Desktop */}
+            <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 overflow-x-auto snap-x snap-mandatory pb-8 md:pb-0 hide-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
                {[
                   {
                      name: "Rahul Sharma",
                      role: "फिटनेस ब्लॉगर",
                      earnings: "₹80,000",
-                     period: "per month",
-                     // image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                      image: "/images/w4.webp",
                      quote: "सिर्फ 3 महीने में मैंने अपनी सैलरी जितनी कमाई शुरू कर दी"
                   },
@@ -374,8 +374,6 @@ export default function V3() {
                      name: "Priya Patel",
                      role: "फूड ब्लॉगर",
                      earnings: "₹82,000",
-                     period: "per month",
-                     // image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                      image: "/images/w3.webp",
                      quote: "अब ब्रांड्स मुझे रेसिपी पोस्ट करने के पैसे देते हैं।"
                   },
@@ -383,13 +381,11 @@ export default function V3() {
                      name: "Amit Verma",
                      role: "क्रिप्टो एनालिस्ट",
                      earnings: "₹1.2 Lakh",
-                     period: "per month",
-                     // image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                      image: "/images/w7.webp",
                      quote: "रीडिज़ाइन के बाद मेरा ट्रैफ़िक दोगुना हो गया"
                   }
                ].map((client, i) => (
-                  <div key={i} className="group relative h-[500px] md:h-[600px] rounded-[2.5rem] overflow-hidden bg-slate-900 border border-white/5 hover:border-[#68b13d]/50 transition-all duration-500 cursor-pointer">
+                  <div key={i} className="group relative shrink-0 w-[85vw] sm:w-[350px] md:w-auto h-[500px] md:h-[600px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-slate-900 border border-white/5 hover:border-[#68b13d]/50 transition-all duration-500 cursor-pointer snap-center shadow-xl">
                      
                      {/* Background Image with Zoom Effect */}
                      <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
@@ -397,39 +393,49 @@ export default function V3() {
                            src={client.image} 
                            alt={client.name}
                            fill
-                           className="object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500"
+                           className="object-cover opacity-80 md:opacity-60 group-hover:opacity-40 transition-opacity duration-500"
                         />
                         {/* Cinematic Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent"></div>
                      </div>
 
-                     {/* Play Button (Centered) */}
-                     {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 transform group-hover:scale-110 transition-transform duration-300">
-                        <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#68b13d] group-hover:border-[#68b13d] transition-colors shadow-[0_0_40px_rgba(0,0,0,0.5)]">
-                           <FaPlay className="ml-1 text-2xl" />
-                        </div>
-                     </div> */}
-
-                     {/* Content Content (Bottom) */}
-                     <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10 z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        
-                        {/* Earnings Tag */}
-                        <div className="inline-flex items-center gap-2 bg-[#68b13d] text-white px-4 py-2 rounded-full text-sm font-bold mb-6 shadow-lg shadow-green-900/50">
-                           <FaArrowTrendUp />
-                           <span>कमाई {client.earnings}</span>
+                     {/* Shorts UI Overlay */}
+                     <div className="absolute inset-0 z-20 flex flex-col justify-between p-6 md:p-10">
+                        {/* Top Controls */}
+                        <div className="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:opacity-0 opacity-100">
+                           <div className="bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-white/80 text-xs font-bold border border-white/10">
+                              Shorts
+                           </div>
+                           <div className="flex flex-col gap-4">
+                              <div className="w-10 h-10 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center text-white hover:bg-[#68b13d] transition-colors border border-white/10">
+                                 <FaPlay />
+                              </div>
+                           </div>
                         </div>
 
-                        <h3 className="text-2xl md:text-3xl font-black text-white mb-2 leading-tight">
-                           &ldquo;{client.quote}&rdquo;
-                        </h3>
-                        
-                        <div className="flex items-center gap-4 mt-6 pt-6 border-t border-white/10">
-                           <div>
-                              <div className="font-bold text-white text-lg">{client.name}</div>
-                              <div className="text-[#68b13d] text-sm font-medium">{client.role}</div>
+                        {/* Bottom Content */}
+                        <div className="transform translate-y-2 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                           <div className="inline-flex items-center gap-2 bg-[#68b13d] text-white px-3 py-1.5 rounded-full text-xs font-bold mb-4 shadow-lg shadow-green-900/50">
+                              <FaArrowTrendUp />
+                              <span>कमाई {client.earnings}</span>
+                           </div>
+
+                           <h3 className="text-xl md:text-3xl font-black text-white mb-2 leading-tight line-clamp-3">
+                              &ldquo;{client.quote}&rdquo;
+                           </h3>
+                           
+                           <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/20">
+                              <div className="w-10 h-10 rounded-full bg-slate-800 border-2 border-[#68b13d] overflow-hidden relative">
+                                  <Image src={client.image} alt={client.name} fill className="object-cover" />
+                              </div>
+                              <div>
+                                 <div className="font-bold text-white text-base">{client.name}</div>
+                                 <div className="text-[#68b13d] text-xs font-medium">{client.role}</div>
+                              </div>
                            </div>
                         </div>
                      </div>
+
                   </div>
                ))}
             </div>
@@ -449,7 +455,7 @@ export default function V3() {
 
       {/* SECTION — EARN FIRST PAY LATER (New CTA) */}
       <section className="py-8 px-4 sm:px-6">
-         <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-indigo-600 to-purple-700 shadow-2xl shadow-indigo-500/30 group hover:scale-[1.02] transition-transform duration-300">
+         <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-[#68b13d] shadow-2xl shadow-green-500/30 group hover:scale-[1.02] transition-transform duration-300">
             
             {/* Animated Background Pattern */}
             <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
@@ -459,18 +465,19 @@ export default function V3() {
                
                {/* Text Content */}
                <div className="flex-1">
-                  <div className="inline-flex items-center gap-2 bg-yellow-400 text-yellow-900 rounded-full px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-wider mb-4 border border-yellow-300 shadow-lg animate-pulse">
-                     <span className="w-2 h-2 rounded-full bg-yellow-900"></span>
+                  <div className="inline-flex items-center gap-2 bg-white text-[#68b13d] rounded-full px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-wider mb-4 border border-white/20 shadow-lg animate-pulse">
+                     <span className="w-2 h-2 rounded-full bg-[#68b13d]"></span>
                      Special Offer
                   </div>
                   <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
                      कमाई पहले, 
-                     <span className="text-yellow-400"> पेमेंट बाद में</span>
+                     <span className="text-slate-900 bg-white px-2 rounded-lg ml-2 inline-block transform -rotate-1"> पेमेंट बाद में</span>
                   </h2>
-                  <p className="text-indigo-100 text-lg font-medium max-w-xl mx-auto md:mx-0 leading-relaxed">
-                     वेबसाइट लॉन्च करने से पहले, हम आपको देते हैं <span className="text-white font-bold border-b border-yellow-400/50">30-मिनट का स्टार्टर एक्टिवेशन सेशन</span> — सिर्फ <span className="text-yellow-400 font-black text-2xl">₹199</span> में।
+                  <p className="text-white text-lg font-medium max-w-xl mx-auto md:mx-0 leading-relaxed">
+                  {/* 30-मिनट का  */}
+                     वेबसाइट लॉन्च करने से पहले, हम आपको देते हैं <span className="text-white font-bold border-b border-white/50">स्टार्टर एक्टिवेशन सेशन</span> — सिर्फ <span className="bg-white text-[#68b13d] px-2 rounded font-black text-2xl">₹199</span> में।
                   </p>
-                  <p className="text-white/60 text-sm mt-4 italic">
+                  <p className="text-white/80 text-sm mt-4 italic">
                      *सीखें कि कैसे आपकी वेबसाइट पहले दिन से ही कमाई के लिए तैयार होगी।
                   </p>
                </div>
@@ -478,18 +485,16 @@ export default function V3() {
                {/* CTA Button */}
                <div className="shrink-0 flex flex-col items-center">
                   <a 
-                     href="https://wa.me/6284563903?text=I%20want%20Starter%20Activation%20Session%20for%20199" 
-                     target="_blank" 
-                     rel="noopener noreferrer"
-                     className="inline-flex items-center gap-3 bg-yellow-400 text-yellow-900 font-black text-xl px-8 py-5 rounded-2xl shadow-[0_10px_20px_rgba(250,204,21,0.3)] hover:bg-yellow-300 transition-all transform group-hover:-translate-y-1 relative overflow-hidden"
+                     href="#pricing" 
+                     className="inline-flex items-center gap-3 bg-white text-[#68b13d] font-black text-xl px-8 py-5 rounded-2xl shadow-[0_10px_20px_rgba(255,255,255,0.2)] hover:bg-slate-50 transition-all transform group-hover:-translate-y-1 relative overflow-hidden"
                   >
                      {/* Shine Effect */}
-                     <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent transform animate-[shimmer_2s_infinite]"></div>
+                     <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-slate-200/40 to-transparent transform animate-[shimmer_2s_infinite]"></div>
                      
                      <FaRocket className="text-2xl" />
                      <span>अभी बुक करें ₹199</span>
                   </a>
-                  <p className="text-indigo-200 text-xs mt-3 font-medium">Limited slots available today</p>
+                  <p className="text-white/90 text-xs mt-3 font-medium">Limited slots available today</p>
                </div>
 
             </div>
@@ -569,106 +574,6 @@ export default function V3() {
   </div>
 </section>
 
-     {/* SECTION 7 — PRICING (No-Brainer Deal Vibe) */}
-<section id="pricing" className="py-16 md:py-32 px-4 sm:px-6 bg-[#f8f9fa] relative">
-  <div className="max-w-5xl mx-auto">
-
-    <div className="text-center mb-12 md:mb-16">
-      <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-4 md:mb-6">
-        एक ही कीमत। <span className="text-[#68b13d]">सब कुछ शामिल।</span>
-      </h2>
-      <p className="text-lg md:text-xl text-slate-600">
-        ना कोई मंथली फीस। ना कोई छिपा चार्ज। सिर्फ एक बार की स्मार्ट इन्वेस्टमेंट।
-      </p>
-    </div>
-
-    <div className="bg-white rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-slate-200 overflow-hidden relative">
-      <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#68b13d] via-[#8bc85a] to-[#68b13d]"></div>
-
-      <div className="grid md:grid-cols-12">
-
-        {/* LEFT SIDE */}
-        <div className="md:col-span-7 p-6 md:p-14 border-b md:border-b-0 md:border-r border-slate-100">
-          <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-8">आज आपको क्या-क्या मिलेगा:</h3>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8">
-            {[
-              "प्रीमियम ब्लॉग डिज़ाइन",
-              "मोबाइल रेस्पॉन्सिव लेआउट",
-              "SEO ऑप्टिमाइज़ेशन सेटअप",
-              "Google Search Console इंटीग्रेशन",
-              "Google Analytics सेटअप",
-              "AdSense-रेडी स्ट्रक्चर",
-              "ज़रूरी पेजेज (About, Contact)",
-              "स्पीड ऑप्टिमाइज़ेशन",
-              "सोशल मीडिया इंटीग्रेशन",
-              "WhatsApp सपोर्ट एक्सेस",
-              "होस्टिंग सेटअप गाइड",
-              "डोमेन कनेक्शन सपोर्ट"
-            ].map((feature, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-[#68b13d] flex items-center justify-center text-xs font-bold">
-                  <FaCheck />
-                </div>
-                <span className="text-slate-600 font-medium text-sm">{feature}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 md:mt-10 p-4 md:p-6 bg-slate-50 rounded-2xl border border-slate-100">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#68b13d]/10 flex items-center justify-center text-[#68b13d] text-xl md:text-2xl">
-                <FaHandshake />
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-900 text-sm md:text-base">100% हैंड-होल्ड प्रोसेस</h4>
-                <p className="text-xs md:text-sm text-slate-500">टेक्निकल काम हम करते हैं। आप सिर्फ कंटेंट पर फोकस करें।</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* RIGHT SIDE */}
-        <div className="md:col-span-5 p-8 md:p-14 bg-slate-50 flex flex-col justify-center items-center text-center relative overflow-hidden">
-          <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#68b13d]/10 rounded-full blur-3xl"></div>
-
-          <div className="inline-block bg-red-100 text-red-600 font-bold text-[10px] md:text-xs px-3 py-1 md:px-4 md:py-1 rounded-full uppercase tracking-wide mb-4 md:mb-6">
-            Limited Time Offer
-          </div>
-
-          <div className="relative group cursor-default">
-             <div className="mb-1 md:mb-2 text-slate-400 line-through text-lg md:text-xl font-semibold filter blur-[2px] opacity-50 group-hover:blur-0 transition-all duration-300">₹12,499</div>
-             <div className="text-5xl md:text-6xl font-black text-slate-900 mb-1 md:mb-2 filter blur-md group-hover:blur-0 transition-all duration-500 select-none">₹4,999</div>
-             
-             {/* Overlay Text */}
-             <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none group-hover:opacity-0 transition-opacity duration-300">
-               <span className="bg-[red] text-white px-4 py-2 rounded-lg font-bold text-sm md:text-base shadow-lg transform rotate-[-5deg] ">
-                 पहले कमाओ — बाद में पैसे दो
-               </span>
-             </div>
-          </div>
-
-          <div className="text-green-600 font-bold text-xs md:text-sm mb-6 md:mb-8 mt-2">₹ 4999</div>
-
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="w-full block bg-[#68b13d] text-white font-bold text-lg md:text-xl py-4 md:py-5 rounded-xl shadow-xl shadow-green-600/20 hover:bg-[#5a9a33] transition-all transform hover:-translate-y-1 relative overflow-hidden group/btn"
-          >
-            <span className="relative z-10">अभी शुरू करें</span>
-            <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform group-hover/btn:translate-x-[200%] transition-transform duration-700 ease-in-out"></div>
-          </button>
-
-          <p className="text-[10px] md:text-xs text-slate-400 mt-4 md:mt-6 flex items-center gap-1">
-            <FaRegClock /> ऑफर सीमित स्लॉट्स के लिए ही उपलब्ध
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
       {/* SECTION 6 — URGENCY (Reality Check Vibe) */}
            <section className="py-16 md:py-32 px-4 sm:px-6 relative bg-white hidden">
         <div className="max-w-7xl mx-auto relative z-10">
@@ -736,6 +641,11 @@ export default function V3() {
 
                          </div>
                          </div>
+      </section>
+
+      {/* SECTION 8 — PRICING */}
+      <section id="pricing" className="bg-[#f8f9fa] relative">
+      <PricingPage />
       </section>
 
               {/* SECTION — WHATSAPP CTA (Instant Access) */}
