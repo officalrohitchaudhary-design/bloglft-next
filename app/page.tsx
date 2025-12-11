@@ -10,102 +10,12 @@ import Footer from "./components/Footer";
 // https://blogvoom-backend.onrender.com
 import PricingPage from "./components/pricing";
 
-function GetStartedModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 sm:px-6">
-      {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" 
-        onClick={onClose}
-      />
-      
-      {/* Modal Content */}
-      <div className="relative w-full max-w-lg transform overflow-hidden rounded-3xl bg-white p-6 text-left shadow-2xl transition-all sm:p-8 animate-in fade-in zoom-in duration-200">
-        
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute right-4 top-4 p-2 rounded-full bg-slate-50 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors z-10"
-        >
-           <FaXmark className="h-5 w-5" />
-        </button>
-
-        {/* Earn First Pay Later Content */}
-        <div className="text-center">
-            
-            {/* Animated Icon */}
-            <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg shadow-indigo-500/30 transform rotate-3 hover:rotate-6 transition-transform">
-               <FaRocket className="text-4xl text-white" />
-            </div>
-
-            <div className="inline-block bg-yellow-100 text-yellow-800 font-bold px-3 py-1 rounded-full text-xs mb-4 uppercase tracking-wider">
-                Limited Time Launch Offer
-            </div>
-
-            <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-2 leading-tight">
-                पहले कमाओ <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">बाद में पैसे दो</span>
-            </h3>
-            
-            <p className="text-slate-600 font-medium text-sm md:text-base leading-relaxed mt-4 mb-8 max-w-sm mx-auto">
-                पहले वेबसाइट लॉन्च करो, जब पैसा आना शुरू हो जाएगा <br/>
-                तब बाद में <span className="text-slate-900 font-black">₹4999</span> दे देना। <br/>
-                <span className="block mt-2 text-indigo-600 font-bold">
-                   अभी सिर्फ ₹199 में Starter Pack जॉइन करें (14 Days Refundable)
-                </span>
-            </p>
-
-            {/* Value Stack */}
-            <div className="bg-slate-50 rounded-2xl p-5 mb-8 text-left border border-slate-100">
-               <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">You Get Instantly:</div>
-               <ul className="space-y-3">
-                  {[
-                     "30-Min Strategy Call (Value ₹2000)",
-                     "Niche Selection Guide (Value ₹1000)",
-                     "Website Roadmap (Value ₹1500)",
-                     "Guaranteed 80% Discount"
-                  ].map((item, i) => (
-                     <li key={i} className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                        <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs">
-                           <FaCheck />
-                        </div>
-                        {item}
-                     </li>
-                  ))}
-               </ul>
-            </div>
-
-            {/* Big CTA */}
-            <a 
-               href="https://wa.me/6284563903?text=I%20want%20to%20join%20Starter%20Pack%20for%20199"
-               target="_blank"
-               rel="noopener noreferrer"
-               className="w-full block bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-black text-lg py-4 rounded-xl shadow-xl shadow-indigo-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all relative overflow-hidden group"
-            >
-               <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform group-hover:translate-x-[200%] transition-transform duration-700 ease-in-out"></div>
-               <span className="relative z-10 flex items-center justify-center gap-2">
-                  <FaWhatsapp className="text-2xl" />
-                  Join Starter Pack @ ₹199
-               </span>
-            </a>
-
-            <p className="text-xs text-slate-400 mt-4">
-               100% Refundable if you don&apos;t like the plan.
-            </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function V3() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen overflow-x-hidden font-sans" style={{background: '#ffffff'}}>
 
-      <GetStartedModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header />
       {/* SECTION 1 — HERO (Clean & Modern Design) */}
       <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 md:pt-32 md:pb-20 px-4 sm:px-6 overflow-hidden bg-white">
@@ -502,18 +412,18 @@ export default function V3() {
             <div className="relative z-10 p-10 md:p-16 flex flex-col items-center gap-6">
                
                <div className="space-y-4">
-                  <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full border border-white/20">
+                  {/* <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full border border-white/20">
                      <span className="text-white text-xs font-bold uppercase tracking-widest">Limited Offer</span>
-                  </div>
+                  </div> */}
                   
                   <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
                   कभी-कभी एक फैसला  <br className="md:hidden" />
                      <span className="text-yellow-300">ज़िंदगी बदल देता है</span>
                   </h2>
 
-                  <p className="text-white/90 text-lg md:text-xl font-medium max-w-xl mx-auto">
+                  {/* <p className="text-white/90 text-lg md:text-xl font-medium max-w-xl mx-auto">
                   एक छोटा सा कदम… आपकी पूरी जिंदगी बदल सकता है।
-                  </p>
+                  </p> */}
                </div>
 
                <a 
