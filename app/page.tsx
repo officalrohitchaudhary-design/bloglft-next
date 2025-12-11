@@ -275,48 +275,79 @@ export default function V3() {
         </div>
       </section>
 
-   {/* SECTION — CALENDLY CTA (Book Meeting) */}
-   <section className="py-8 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-[#006BFF] shadow-2xl shadow-blue-500/30 group hover:scale-[1.02] transition-transform duration-300">
-          
-          {/* Animated Background Pattern */}
-          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-          <div className="absolute -left-20 -top-20 w-64 h-64 bg-white/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
-          
-          <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
-            
-            {/* Text Content */}
-            <div className="flex-1">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 text-white text-xs md:text-sm font-bold uppercase tracking-wider mb-4 border border-white/20">
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                Video Call Available
+      {/* SECTION 7 — EARN FIRST PAY LATER (New CTA) */}
+      <section className="py-16 md:py-32 px-4 sm:px-6 bg-white relative">
+  <div className="max-w-7xl mx-auto">
+    
+    {/* Section Header */}
+    <div className="text-center mx-auto mb-12 md:mb-20">
+      <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-4 md:mb-6 tracking-tight">
+      आपकी लाइफ का सबसे  <span className="text-[#68b13d] underline decoration-4 decoration-[#68b13d]/20 underline-offset-8">पावरफुल इनकम सोर्स</span>
+      </h2>
+      <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+      जब आप सो रहे होते हैं… तब भी जो कमाए—ऐसा डिजिटल एसेट बनाएं।
+      </p>
+    </div>
+
+    {/* Comparison & Opportunity Section */}
+    <div className="grid lg:grid-cols-12 gap-8 items-stretch">
+      
+      {/* Comparison Table */}
+      <div className="lg:col-span-7 bg-slate-50 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 border border-slate-100">
+        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 md:mb-10">ब्लॉगिंग वेबसाइट vs सोशल मीडिया (youtube)</h3>
+        <div className="space-y-4 md:space-y-6">
+          {[
+            { label: "चेहरा / कैमरा चाहिए?", blog: "नहीं", social: "हाँ" },
+            { label: "कंटेंट कितने समय तक चलता है?", blog: "सालों तक", social: "कुछ घंटे" },
+            { label: "कमाई के मौके", blog: "बहुत ज्यादा", social: "बहुत कम" },
+            { label: "ओनरशिप", blog: "100% आपकी", social: "प्लेटफॉर्म की" },
+            { label: "प्रतिस्पर्धा", blog: "कम", social: "बहुत ज्यादा" },
+          ].map((row, idx) => (
+            <div key={idx} className="flex items-center justify-between py-3 md:py-4 border-b border-slate-200 last:border-0">
+              <span className="font-bold text-slate-700 text-sm md:text-lg flex-1">{row.label}</span>
+              <div className="flex items-center gap-2 md:gap-8 text-right">
+                <div className="w-16 md:w-24 hidden sm:block">
+                  <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase block mb-1">सोशल मीडिया</span>
+                  <span className="font-bold text-red-500 bg-red-50 px-2 py-1 rounded-full text-xs md:text-sm">{row.social}</span>
+                </div>
+                <div className="w-20 md:w-24 border-l border-slate-200 pl-2 md:pl-8">
+                  <span className="text-[10px] md:text-xs font-bold text-[#68b13d] uppercase block mb-1">ब्लॉगिंग वेबसाइट</span>
+                  <span className="font-bold text-[#68b13d] bg-[#68b13d]/10 px-2 py-1 rounded-full text-xs md:text-sm">{row.blog}</span>
+                </div>
               </div>
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
-                Face-to-Face <br/>
-                <span className="text-blue-100">Meeting Book करें</span>
-              </h2>
-              <p className="text-white/90 text-lg font-medium max-w-md mx-auto md:mx-0">
-                 सीधे हमारे एक्सपर्ट्स के साथ 1:1 वीडियो कॉल पर बात करें और अपने सारे सवाल पूछें।
-              </p>
             </div>
-
-            {/* CTA Button */}
-            <div className="shrink-0">
-              <a 
-                href="https://calendly.com/singhmak305/30min" // Replace with actual Calendly link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-white text-[#006BFF] font-black text-xl px-8 py-5 rounded-2xl shadow-xl hover:bg-blue-50 transition-all transform group-hover:-translate-y-1"
-              >
-                <FaRegClock className="text-3xl" />
-                <span>Book Free Call</span>
-              </a>
-              <p className="text-white/70 text-xs mt-3 font-medium">15 min free consultation</p>
-            </div>
-
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+
+      {/* Golden Era Callout */}
+      <div className="lg:col-span-5 bg-[#1a1a1a] rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden flex flex-col justify-center">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#68b13d] rounded-full blur-[100px] opacity-20"></div>
+        
+        <div className="relative z-10">
+          <span className="inline-block px-3 py-1 md:px-4 md:py-1 rounded-full bg-[#68b13d]/20 text-[#68b13d] font-bold text-[10px] md:text-xs uppercase tracking-wider mb-4 md:mb-6 border border-[#68b13d]/30">
+            मार्केट अवसर
+          </span>
+          <h3 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 leading-tight">
+            2026 ब्लॉगिंग का <br/>
+            <span className="text-[#68b13d]">सुनेहरा दौर है</span>
+          </h3>
+          <p className="text-slate-400 text-base md:text-lg mb-8 md:mb-10 leading-relaxed">
+            AI टूल्स और भारत में तेजी से बढ़ते इंटरनेट यूज़र्स की वजह से, आज ब्लॉग शुरू करना पहले से 10 गुना आसान और ज्यादा मुनाफ़ेदार है।
+          </p>
+          <a href="#pricing" className="inline-flex items-center gap-3 font-bold text-white group hover:text-[#68b13d] transition-colors">
+            अपनी ब्लॉगिंग वेबसाइट शुरू करें
+            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-[#68b13d] group-hover:text-white transition-all">
+              <FaArrowRight className="w-3 h-3 md:w-4 md:h-4" />
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* SECTION 5.5 — CLIENT REVIEWS (Premium Dark Cinematic Vibe) */}
       <section className="py-20 md:py-32 px-4 sm:px-6 bg-[#050505] relative overflow-hidden">
@@ -452,9 +483,8 @@ export default function V3() {
          </div>
       </section>
 
-
-      {/* SECTION — EARN FIRST PAY LATER (New CTA) */}
-      <section className="py-8 px-4 sm:px-6">
+           {/* SECTION — EARN FIRST PAY LATER (New CTA) */}
+           <section className="py-8 px-4 sm:px-6">
          <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-[#68b13d] shadow-2xl shadow-green-500/30 group hover:scale-[1.02] transition-transform duration-300">
             
             {/* Animated Background Pattern */}
@@ -467,15 +497,16 @@ export default function V3() {
                <div className="flex-1">
                   <div className="inline-flex items-center gap-2 bg-white text-[#68b13d] rounded-full px-4 py-1.5 text-xs md:text-sm font-bold uppercase tracking-wider mb-4 border border-white/20 shadow-lg animate-pulse">
                      <span className="w-2 h-2 rounded-full bg-[#68b13d]"></span>
-                     Special Offer
+                     Special Offer 
                   </div>
-                  <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+                  {/* <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
                      कमाई पहले, 
                      <span className="text-slate-900 bg-white px-2 rounded-lg ml-2 inline-block transform -rotate-1"> पेमेंट बाद में</span>
-                  </h2>
+                  </h2> */}
                   <p className="text-white text-lg font-medium max-w-xl mx-auto md:mx-0 leading-relaxed">
                   {/* 30-मिनट का  */}
-                     वेबसाइट लॉन्च करने से पहले, हम आपको देते हैं <span className="text-white font-bold border-b border-white/50">स्टार्टर एक्टिवेशन सेशन</span> — सिर्फ <span className="bg-white text-[#68b13d] px-2 rounded font-black text-2xl">₹199</span> में।
+                     वेबसाइट लॉन्च करने से पहले, हम आपको देते हैं <span className="text-white font-bold border-b border-white/50">स्टार्टर एक्टिवेशन सेशन</span> 
+                     {/* — सिर्फ <span className="bg-white text-[#68b13d] px-2 rounded font-black text-2xl">₹0</span> में। */}
                   </p>
                   <p className="text-white/80 text-sm mt-4 italic">
                      *सीखें कि कैसे आपकी वेबसाइट पहले दिन से ही कमाई के लिए तैयार होगी।
@@ -492,7 +523,7 @@ export default function V3() {
                      <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-slate-200/40 to-transparent transform animate-[shimmer_2s_infinite]"></div>
                      
                      <FaRocket className="text-2xl" />
-                     <span>अभी बुक करें ₹199</span>
+                     <span>अभी बुक करें</span>
                   </a>
                   <p className="text-white/90 text-xs mt-3 font-medium">Limited slots available today</p>
                </div>
@@ -501,155 +532,13 @@ export default function V3() {
          </div>
       </section>
 
-      <section className="py-16 md:py-32 px-4 sm:px-6 bg-white relative">
-  <div className="max-w-7xl mx-auto">
-    
-    {/* Section Header */}
-    <div className="text-center mx-auto mb-12 md:mb-20">
-      <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-4 md:mb-6 tracking-tight">
-      आपकी लाइफ का सबसे  <span className="text-[#68b13d] underline decoration-4 decoration-[#68b13d]/20 underline-offset-8">पावरफुल इनकम सोर्स</span>
-      </h2>
-      <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
-      जब आप सो रहे होते हैं… तब भी जो कमाए—ऐसा डिजिटल एसेट बनाएं।
-      </p>
-    </div>
-
-    {/* Comparison & Opportunity Section */}
-    <div className="grid lg:grid-cols-12 gap-8 items-stretch">
-      
-      {/* Comparison Table */}
-      <div className="lg:col-span-7 bg-slate-50 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 border border-slate-100">
-        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 md:mb-10">ब्लॉगिंग वेबसाइट vs सोशल मीडिया (youtube)</h3>
-        <div className="space-y-4 md:space-y-6">
-          {[
-            { label: "चेहरा / कैमरा चाहिए?", blog: "नहीं", social: "हाँ" },
-            { label: "कंटेंट कितने समय तक चलता है?", blog: "सालों तक", social: "कुछ घंटे" },
-            { label: "कमाई के मौके", blog: "बहुत ज्यादा", social: "बहुत कम" },
-            { label: "ओनरशिप", blog: "100% आपकी", social: "प्लेटफॉर्म की" },
-            { label: "प्रतिस्पर्धा", blog: "कम", social: "बहुत ज्यादा" },
-          ].map((row, idx) => (
-            <div key={idx} className="flex items-center justify-between py-3 md:py-4 border-b border-slate-200 last:border-0">
-              <span className="font-bold text-slate-700 text-sm md:text-lg flex-1">{row.label}</span>
-              <div className="flex items-center gap-2 md:gap-8 text-right">
-                <div className="w-16 md:w-24 hidden sm:block">
-                  <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase block mb-1">सोशल मीडिया</span>
-                  <span className="font-bold text-red-500 bg-red-50 px-2 py-1 rounded-full text-xs md:text-sm">{row.social}</span>
-                </div>
-                <div className="w-20 md:w-24 border-l border-slate-200 pl-2 md:pl-8">
-                  <span className="text-[10px] md:text-xs font-bold text-[#68b13d] uppercase block mb-1">ब्लॉगिंग वेबसाइट</span>
-                  <span className="font-bold text-[#68b13d] bg-[#68b13d]/10 px-2 py-1 rounded-full text-xs md:text-sm">{row.blog}</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Golden Era Callout */}
-      <div className="lg:col-span-5 bg-[#1a1a1a] rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden flex flex-col justify-center">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#68b13d] rounded-full blur-[100px] opacity-20"></div>
-        
-        <div className="relative z-10">
-          <span className="inline-block px-3 py-1 md:px-4 md:py-1 rounded-full bg-[#68b13d]/20 text-[#68b13d] font-bold text-[10px] md:text-xs uppercase tracking-wider mb-4 md:mb-6 border border-[#68b13d]/30">
-            मार्केट अवसर
-          </span>
-          <h3 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 leading-tight">
-            2026 ब्लॉगिंग का <br/>
-            <span className="text-[#68b13d]">सुनेहरा दौर है</span>
-          </h3>
-          <p className="text-slate-400 text-base md:text-lg mb-8 md:mb-10 leading-relaxed">
-            AI टूल्स और भारत में तेजी से बढ़ते इंटरनेट यूज़र्स की वजह से, आज ब्लॉग शुरू करना पहले से 10 गुना आसान और ज्यादा मुनाफ़ेदार है।
-          </p>
-          <a href="#pricing" className="inline-flex items-center gap-3 font-bold text-white group hover:text-[#68b13d] transition-colors">
-            अपनी ब्लॉगिंग वेबसाइट शुरू करें
-            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-[#68b13d] group-hover:text-white transition-all">
-              <FaArrowRight className="w-3 h-3 md:w-4 md:h-4" />
-            </div>
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-      {/* SECTION 6 — URGENCY (Reality Check Vibe) */}
-           <section className="py-16 md:py-32 px-4 sm:px-6 relative bg-white hidden">
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-             {/* Left: The Cost of Waiting */}
-             <div className="relative">
-                <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 md:mb-8 leading-tight">
-                   Why Starting <span className="text-red-500 underline decoration-4 decoration-red-200 underline-offset-4">Today</span> Matters
-                </h2>
-                <p className="text-lg md:text-xl text-slate-600 mb-8 md:mb-10">
-                   Every day you wait, a keyword gets taken, a niche gets filled, and a competitor gets ahead.
-                </p>
-                
-                <div className="space-y-4 md:space-y-6">
-                   {[
-                      { title: "Traffic Opportunity", status: "High", trend: "Declining for late entrants", color: "text-orange-500" },
-                      { title: "Competition Level", status: "Low", trend: "Increasing daily", color: "text-green-600" },
-                      { title: "Google Trust Score", status: "Zero", trend: "Takes months to build (Start Now)", color: "text-slate-500" },
-                   ].map((stat, i) => (
-                      <div key={i} className="bg-slate-50 p-4 md:p-6 rounded-2xl border border-slate-100 flex justify-between items-center">
-                         <div>
-                            <div className="font-bold text-slate-900 text-base md:text-lg">{stat.title}</div>
-                            <div className="text-xs md:text-sm text-slate-500">{stat.trend}</div>
-                      </div>
-                         <div className={`font-black text-lg md:text-xl ${stat.color}`}>{stat.status}</div>
-                   </div>
-                   ))}
-             </div>
-          </div>
-
-             {/* Right: The Reward */}
-             <div className="relative bg-[#68b13d] rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-14 text-white shadow-2xl shadow-green-200/50 overflow-hidden text-center">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                
-                <div className="relative z-10">
-                   <div className="inline-block bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 md:px-6 md:py-2 text-xs md:text-sm font-bold uppercase tracking-widest mb-6 md:mb-8">
-                      Future Projection
-        </div>
-                   <h3 className="text-2xl md:text-4xl font-black mb-4 md:mb-6">
-                      Imagine 12 Months From Now
-                   </h3>
-                   <div className="text-5xl md:text-7xl font-black mb-2 md:mb-4">₹50k+</div>
-                   <p className="text-base md:text-lg text-green-100 mb-8 md:mb-10">Monthly Passive Income</p>
-                   
-                   <ul className="text-left space-y-3 md:space-y-4 mb-8 md:mb-10 max-w-sm mx-auto pl-4 md:pl-0">
-                      <li className="flex items-center gap-3">
-                         <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white flex items-center justify-center text-[#68b13d]"><FaCheck size={10}/></div>
-                         <span className="font-bold text-sm md:text-base">Financial Freedom</span>
-                      </li>
-                      <li className="flex items-center gap-3">
-                         <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white flex items-center justify-center text-[#68b13d]"><FaCheck size={10}/></div>
-                         <span className="font-bold text-sm md:text-base">Work From Anywhere</span>
-                      </li>
-                      <li className="flex items-center gap-3">
-                         <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white flex items-center justify-center text-[#68b13d]"><FaCheck size={10}/></div>
-                         <span className="font-bold text-sm md:text-base">Be Your Own Boss</span>
-                      </li>
-                   </ul>
-
-                   <button className="w-full bg-white text-[#68b13d] font-black text-base md:text-lg py-3 md:py-4 rounded-xl shadow-lg hover:bg-green-50 transition-colors">
-                      Claim This Future
-                   </button>
-                      </div>
-                   </div>
-
-                         </div>
-                         </div>
-      </section>
-
-      {/* SECTION 8 — PRICING */}
-      <section id="pricing" className="bg-[#f8f9fa] relative">
+            {/* SECTION 8 — PRICING */}
+            <section id="pricing" className="bg-[#f8f9fa] relative">
       <PricingPage />
       </section>
 
-              {/* SECTION — WHATSAPP CTA (Instant Access) */}
-              <section className="py-16 px-4 sm:px-6">
+                   {/* SECTION — WHATSAPP CTA (Instant Access) */}
+                   <section className="py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-[#25D366] shadow-2xl shadow-green-500/30 group hover:scale-[1.02] transition-transform duration-300">
           
           {/* Animated Background Pattern */}
@@ -682,6 +571,49 @@ export default function V3() {
                 <span>Chat on WhatsApp</span>
               </a>
               <p className="text-white/70 text-xs mt-3 font-medium">Typically replies in &lt; 2 mins</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+   {/* SECTION — CALENDLY CTA (Book Meeting) */}
+   <section className="py-8 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-[#006BFF] shadow-2xl shadow-blue-500/30 group hover:scale-[1.02] transition-transform duration-300">
+          
+          {/* Animated Background Pattern */}
+          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+          <div className="absolute -left-20 -top-20 w-64 h-64 bg-white/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+          
+          <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+            
+            {/* Text Content */}
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 text-white text-xs md:text-sm font-bold uppercase tracking-wider mb-4 border border-white/20">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                Video Call Available
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+                Face-to-Face <br/>
+                <span className="text-blue-100">Meeting Book करें</span>
+              </h2>
+              <p className="text-white/90 text-lg font-medium max-w-md mx-auto md:mx-0">
+                 सीधे हमारे एक्सपर्ट्स के साथ 1:1 वीडियो कॉल पर बात करें और अपने सारे सवाल पूछें।
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <div className="shrink-0">
+              <a 
+                href="https://calendly.com/singhmak305/30min" // Replace with actual Calendly link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-white text-[#006BFF] font-black text-xl px-8 py-5 rounded-2xl shadow-xl hover:bg-blue-50 transition-all transform group-hover:-translate-y-1"
+              >
+                <FaRegClock className="text-3xl" />
+                <span>Book Free Call</span>
+              </a>
+              <p className="text-white/70 text-xs mt-3 font-medium">15 min free consultation</p>
             </div>
 
           </div>

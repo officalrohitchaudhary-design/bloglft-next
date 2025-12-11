@@ -11,7 +11,7 @@ import {
 export default function PricingPage() {
   const [showCouponPopup, setShowCouponPopup] = useState(false);
   const [isCouponApplied, setIsCouponApplied] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState<'free' | 'starter' | 'pro'>('starter');
+  const [selectedPlan, setSelectedPlan] = useState<'free' | 'starter' | 'pro'>('free');
 
   const handleApplyCoupon = () => {
     setShowCouponPopup(false);
@@ -330,7 +330,7 @@ export default function PricingPage() {
       </main>
 
       {/* MOBILE FIXED BOTTOM ACTION */}
-      {/* <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-slate-200 md:hidden z-40 shadow-[0_-5px_20px_rgba(0,0,0,0.05)]">
+      <div className="absolute bottom-0 left-0 right-0 p-4 bg-white border-t border-slate-200 md:hidden z-40 shadow-[0_-5px_20px_rgba(0,0,0,0.05)]">
         <button 
             onClick={handleMobileAction}
             className={`w-full py-4 rounded-xl font-black text-lg shadow-lg flex items-center justify-center gap-2
@@ -350,7 +350,7 @@ export default function PricingPage() {
                 <>AI प्रो लें {isCouponApplied ? '₹199' : '₹399'}</>
             )}
         </button>
-      </div> */}
+      </div>
 
 
       {/* COUPON POPUP */}
