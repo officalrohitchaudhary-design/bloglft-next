@@ -117,10 +117,10 @@ export default function AboutPage() {
                <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
                   <div className="md:w-1/3 text-right md:text-right flex md:block flex-row-reverse items-center gap-4 md:gap-0">
                      <h3 className="text-4xl font-black text-[#68b13d]">2025</h3>
-                     <div className="text-slate-500 font-bold">BlogVoom की लॉन्चिंग</div>
+                     <div className="text-slate-500 font-bold">bvoom की लॉन्चिंग</div>
                   </div>
                   <div className="md:w-2/3 bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-                     <p className="text-slate-700">पेश है <strong>BlogVoom</strong>। हमने अपने 10 सालों के अनुभव को एक सरल "Business-in-a-Box" मॉडल में बदल दिया है। अब, कोई भी केवल 24 घंटों में एक प्रोफेशनल, कमाई के लिए तैयार ब्लॉग शुरू कर सकता है।</p>
+                     <p className="text-slate-700">पेश है <strong>bvoom</strong>। हमने अपने 10 सालों के अनुभव को एक सरल "Business-in-a-Box" मॉडल में बदल दिया है। अब, कोई भी केवल 24 घंटों में एक प्रोफेशनल, कमाई के लिए तैयार ब्लॉग शुरू कर सकता है।</p>
                   </div>
                </div>
             </div>

@@ -47,8 +47,16 @@ export default function Footer() {
           </h2>
         </div>
         
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-12 text-sm text-slate-400">
+          <a href="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</a>
+          <span className="hidden md:inline">•</span>
+          <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+          <span className="hidden md:inline">•</span>
+          <a href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</a>
+        </div>
+        
         <div className="text-center text-slate-500 text-sm mt-8">
-          &copy; {new Date().getFullYear()} BlogVoom. All rights reserved.
+          &copy; {new Date().getFullYear()} bvoom. All rights reserved.
         </div>
         
         <div className="text-center text-slate-400 text-sm mt-4 flex items-center justify-center gap-2">

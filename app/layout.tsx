@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
+// import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "bvoom - Start Earning with Your Blog in 24 Hours | 10+ Years Experience",
-  description: "People in India are earning lakhs every month with blogging. We build your earning-ready blog in 24 hours — backed by 10+ years of blogging experience. Premium blog setup at ₹4,999.",
+  title: "bvoom – Start Your Blog & Earn Online | Expert Blogging Setup for India | 10+ Years Experience",
+  description: "Want to earn money online? Millions people in India are making income through blogging. bvoom helps you launch an SEO-ready, AdSense-friendly blog built with 10+ years of expert experience — perfect for beginners and creators who want to grow fast.",
   verification: {
     google: "0R0qzrgWFsCvlV7T2orjvYFXu8KYAzv_KrxMUmHBmpM",
   },
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script id="facebook-pixel" strategy="afterInteractive">
+        {/* <Script id="facebook-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -47,7 +47,7 @@ export default function RootLayout({
             fbq('init', '1972490776627594');
             fbq('track', 'PageView');
           `}
-        </Script>
+        </Script> */}
         <noscript>
           <img
             height="1"

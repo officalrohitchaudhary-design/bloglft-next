@@ -28,7 +28,7 @@ export default function Header() {
           <div className="mt-4 flex items-center justify-between rounded-2xl border border-slate-200/70 bg-white/80 px-4 py-3 shadow-sm backdrop-blur-xl sm:px-6">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2" onClick={close}>
-               <Image src="/images/smallsvg.svg" alt="BlogVoom" width={100} height={100} />
+               <Image src="/images/smallsvg.svg" alt="bvoom" width={100} height={100} />
             </Link>
 
             {/* Desktop Nav */}
