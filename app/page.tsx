@@ -102,13 +102,15 @@ export default function V3() {
           </div>
           {/* Video Container */}
           <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
-            <iframe 
+            {/* <iframe 
               className="w-full h-full"
-              src="https://www.youtube.com/embed/VIDEO_ID" 
+              src="https://youtu.be/og-vt-oQrL8?si=6cVvfVbtoaoskM53" 
               title="YouTube video player" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowFullScreen
-            ></iframe>
+            ></iframe> */}
+
+<iframe className="w-full h-full" src="https://www.youtube.com/embed/og-vt-oQrL8?si=-I9j0s5jzBMVGdm5" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           </div>
         </div>
       </section>
