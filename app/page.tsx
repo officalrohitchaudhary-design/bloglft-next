@@ -101,16 +101,57 @@ export default function V3() {
             </h2>
           </div>
           {/* Video Container */}
-          <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
-            {/* <iframe 
-              className="w-full h-full"
-              src="https://youtu.be/og-vt-oQrL8?si=6cVvfVbtoaoskM53" 
-              title="YouTube video player" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowFullScreen
-            ></iframe> */}
+          <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 group cursor-pointer">
+            
+            {/* Custom Thumbnail */}
+            <div className="absolute inset-0 z-10">
+               <Image 
+                  src="/images/thumnail.png" // Replace with your actual thumbnail image path if different
+                  alt="Video Thumbnail" 
+                  fill 
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+               />
+               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+               
+               {/* Play Button Overlay */}
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-[red] rounded-full flex items-center justify-center pl-1 shadow-lg">
+                     <FaPlay className="text-white text-3xl" />
+                  </div>
+               </div>
+            </div>
 
-<iframe className="w-full h-full" src="https://www.youtube.com/embed/og-vt-oQrL8?si=-I9j0s5jzBMVGdm5" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <iframe 
+               className="w-full h-full relative z-20 opacity-0 pointer-events-none transition-opacity duration-500"
+               src="https://www.youtube.com/embed/og-vt-oQrL8?si=-I9j0s5jzBMVGdm5&autoplay=1" 
+               title="YouTube video player"  
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+               allowFullScreen
+               onLoad={(e) => {
+                  // Simple logic: When iframe loads, we can't easily detect 'play' without YouTube API JS.
+                  // For a pure CSS/React solution without external scripts, the best way is to hide thumbnail on click.
+                  // We'll implement a simple onClick handler on the wrapper div.
+               }}
+            ></iframe>
+
+            {/* Click Handler to Show Video */}
+            <div 
+               className="absolute inset-0 z-30"
+               onClick={(e) => {
+                  const container = e.currentTarget.parentElement;
+                  const thumbnail = container?.querySelector('.absolute.inset-0.z-10') as HTMLElement;
+                  const iframe = container?.querySelector('iframe') as HTMLIFrameElement;
+                  
+                  if (thumbnail && iframe) {
+                     thumbnail.style.opacity = '0';
+                     thumbnail.style.pointerEvents = 'none';
+                     iframe.style.opacity = '1';
+                     iframe.style.pointerEvents = 'auto';
+                     // Reload iframe with autoplay to start video immediately
+                     iframe.src += "&autoplay=1"; 
+                  }
+               }}
+            ></div>
           </div>
         </div>
       </section>
