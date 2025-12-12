@@ -15,7 +15,7 @@ export default function Header() {
     // { href: "/contact", label: "Contact" },
     { href: "/about", label: "हमारे बारे में" },
     { href: "/contact", label: "संपर्क करें" },
-    { href: "/pricing", label: "प्लान्स" },
+    { href: "/#pricing", label: "प्लान्स" },
   ];
 
   const toggle = () => setOpen((prev) => !prev);
@@ -49,10 +49,10 @@ export default function Header() {
               href="/#pricing"
               className="hidden items-center gap-2 rounded-full bg-[#68b13d] px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-green-600/20 transition-all hover:bg-[#5a9a33] hover:scale-105 md:inline-flex"
             >
-              Start Now
-              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               अभी शुरू करें
+              {/* <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              </svg> */}
             </Link>
 
             {/* Mobile Burger */}

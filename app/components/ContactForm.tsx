@@ -6,13 +6,13 @@ import * as Yup from "yup";
 import { FaCheck, FaRegCircleXmark } from "react-icons/fa6";
 
 const validationSchema = Yup.object({
-  name: Yup.string().required("Name is required"),
-  email: Yup.string().email("Invalid email address"),
+  name: Yup.string().required("नाम भरना ज़रूरी है"),
+  email: Yup.string().email("ईमेल सही नहीं है"),
   mobile: Yup.string()
-    .required("Mobile number is required")
-    .matches(/^[0-9]+$/, "Must be only digits")
-    .min(10, "Must be exactly 10 digits")
-    .max(10, "Must be exactly 10 digits"),
+    .required("मोबाइल नंबर ज़रूरी है")
+    .matches(/^[0-9]+$/, "सिर्फ नंबर होने चाहिए")
+    .min(10, "10 अंक होने चाहिए")
+    .max(10, "10 अंक होने चाहिए"),
   description: Yup.string(),
 });
 
@@ -70,17 +70,17 @@ export default function ContactForm({ onSuccess, onClose, isInModal = false }: C
         <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-50 text-[#68b13d] animate-bounce">
           <FaCheck className="h-10 w-10" />
         </div>
-        <h3 className="text-3xl font-black text-slate-900 mb-3">Thank You!</h3>
+        <h3 className="text-3xl font-black text-slate-900 mb-3">धन्यवाद!</h3>
         <p className="text-slate-600 mb-8 text-lg leading-relaxed">
-          We have received your details. <br />
-          Our team will connect with you within <span className="font-bold text-slate-900">24 hours</span>.
+          हमें आपकी जानकारी मिल गई है। <br />
+          हमारी टीम आपसे <span className="font-bold text-slate-900">24 घंटे</span> के भीतर संपर्क करेगी।
         </p>
         {isInModal && onClose && (
           <button
             onClick={onClose}
             className="w-full rounded-xl bg-[#68b13d] py-4 text-white font-bold text-lg hover:bg-[#5a9a33] transition-colors shadow-lg shadow-green-600/20"
           >
-            Close
+            बंद करें
           </button>
         )}
       </div>
@@ -90,16 +90,16 @@ export default function ContactForm({ onSuccess, onClose, isInModal = false }: C
   return (
     <>
       <div className="mb-8">
-        <h3 className="text-3xl font-black text-slate-900 mb-2">Get Started</h3>
+        <h3 className="text-3xl font-black text-slate-900 mb-2">शुरुआत करें</h3>
         <p className="text-slate-500 font-medium">
-          Fill in your details below to kickstart your blogging journey.
+          अपनी ब्लॉगिंग यात्रा शुरू करने के लिए नीचे अपनी जानकारी भरें।
         </p>
       </div>
 
       <form onSubmit={formik.handleSubmit} className="space-y-5">
         <div>
           <label htmlFor="name" className="block text-sm font-bold text-slate-700 mb-1.5">
-            Name <span className="text-red-500">*</span>
+            नाम <span className="text-red-500">*</span>
           </label>
           <input
             id="name"
@@ -110,7 +110,7 @@ export default function ContactForm({ onSuccess, onClose, isInModal = false }: C
                 ? "border-red-100 bg-red-50 text-red-900 focus:border-red-300"
                 : "border-slate-100 bg-slate-50 text-slate-900 focus:border-[#68b13d] focus:bg-white"
             }`}
-            placeholder="Enter your full name"
+            placeholder="अपना पूरा नाम लिखें"
           />
           {formik.touched.name && formik.errors.name && (
             <p className="mt-1.5 text-xs text-red-500 font-bold flex items-center gap-1">
@@ -121,7 +121,7 @@ export default function ContactForm({ onSuccess, onClose, isInModal = false }: C
 
         <div>
           <label htmlFor="email" className="block text-sm font-bold text-slate-700 mb-1.5">
-            Email Address <span className="text-slate-400 font-normal">(Optional)</span>
+            ईमेल पता <span className="text-slate-400 font-normal">(वैकल्पिक)</span>
           </label>
           <input
             id="email"
@@ -143,7 +143,7 @@ export default function ContactForm({ onSuccess, onClose, isInModal = false }: C
 
         <div>
           <label htmlFor="mobile" className="block text-sm font-bold text-slate-700 mb-1.5">
-            Mobile Number <span className="text-red-500">*</span>
+            मोबाइल नंबर <span className="text-red-500">*</span>
           </label>
           <div className="relative">
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold">
@@ -171,14 +171,14 @@ export default function ContactForm({ onSuccess, onClose, isInModal = false }: C
 
         <div>
           <label htmlFor="description" className="block text-sm font-bold text-slate-700 mb-1.5">
-            Description <span className="text-slate-400 font-normal">(Optional)</span>
+            विवरण <span className="text-slate-400 font-normal">(वैकल्पिक)</span>
           </label>
           <textarea
             id="description"
             rows={3}
             {...formik.getFieldProps("description")}
             className="w-full rounded-xl border-2 border-slate-100 bg-slate-50 px-4 py-3.5 outline-none transition-all focus:border-[#68b13d] focus:bg-white font-medium resize-none"
-            placeholder="Tell us about your blog idea..."
+            placeholder="अपने ब्लॉग आइडिया के बारे में बताएं..."
           />
         </div>
 
@@ -187,10 +187,9 @@ export default function ContactForm({ onSuccess, onClose, isInModal = false }: C
           disabled={formik.isSubmitting}
           className="w-full rounded-xl bg-[#68b13d] py-4 text-white font-bold text-lg shadow-xl shadow-green-600/20 transition-all hover:bg-[#5a9a33] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
         >
-          {formik.isSubmitting ? "Processing..." : "Submit Request"}
+          {formik.isSubmitting ? "प्रोसेस हो रहा है..." : "सबमिट करें"}
         </button>
       </form>
     </>
   );
 }
-

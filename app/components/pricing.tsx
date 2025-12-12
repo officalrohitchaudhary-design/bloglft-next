@@ -4,12 +4,11 @@ import { useState } from "react";
 import { 
   FaCheck, 
   FaWandMagicSparkles, 
-  FaArrowRight 
+  FaArrowRight,
+  FaXmark
 } from "react-icons/fa6";
 import { FaExternalLinkAlt, FaCopy } from "react-icons/fa";
 import ContactForm from "./ContactForm";
-import { FaXmark } from "react-icons/fa6";
-
 
 function GetStartedModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   if (!isOpen) return null;
@@ -44,13 +43,14 @@ export default function PricingPage() {
   const [selectedPlan, setSelectedPlan] = useState<'free' | 'starter' | 'pro'>('free');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+
   const handleMobileAction = () => {
     if (selectedPlan === 'free') {
         setShowFreePopup(true);
-    } else if (selectedPlan === 'starter') {
-        window.open(`https://wa.me/6284563903?text=I%20want%20to%20join%20Starter%20Pack%20for%20199`, '_blank');
+    } else if (selectedPlan === 'starter') {  
+        setIsModalOpen(true);
     } else if (selectedPlan === 'pro') {
-        window.open(`https://wa.me/6284563903?text=I%20want%20to%20join%20AI%20Pro%20Pack%20for%20399`, '_blank');
+        setIsModalOpen(true);
     }
   };
 
@@ -61,7 +61,8 @@ export default function PricingPage() {
 
   return (
     <div className="font-sans bg-slate-50">
-      <GetStartedModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+          <GetStartedModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+          
       {/* Main Content */}
       <main className="pt-10 pb-10 md:pb-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
@@ -192,7 +193,7 @@ export default function PricingPage() {
                 onClick={() => setShowFreePopup(true)}
                 className="w-full py-4 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-colors flex items-center justify-center gap-2 group"
               >
-                Access Demo
+                डेमो देखें
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
 
@@ -226,14 +227,13 @@ export default function PricingPage() {
                  </div>
               </div>
 
-              <a 
-                href="https://wa.me/6284563903?text=I%20want%20to%20join%20Starter%20Pack%20for%20199"
-                target="_blank" 
+              <button 
+                onClick={() => setIsModalOpen(true)}
                 rel="noopener noreferrer"
                 className="w-full py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2 mb-8 bg-[#68b13d] text-white hover:bg-[#5a9a33]"
               >
-                Get Starter Plan
-              </a>
+                शुरू करें ₹199
+              </button>
 
               <div className="space-y-4">
                 {[
@@ -270,14 +270,13 @@ export default function PricingPage() {
                  </div>
               </div>
 
-              <a 
-                 href="https://wa.me/6284563903?text=I%20want%20to%20join%20AI%20Pro%20Pack%20for%20399"
-                 target="_blank" 
+              <button 
+                 onClick={() => setIsModalOpen(true)}
                  rel="noopener noreferrer"
                 className="w-full py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2 mb-8 bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-200"
               >
-                Get AI Pro Plan
-              </a>
+                शुरू करें ₹399
+              </button>
 
               <div className="space-y-4">
                 {[
@@ -301,7 +300,18 @@ export default function PricingPage() {
 
           </div>
 
-          <div className=" bottom-0 left-0 right-0 mt-5 bg-white border-t border-slate-200 md:hidden z-40 shadow-[0_-5px_20px_rgba(0,0,0,0.05)]">
+          {/* Custom Plan Link */}
+            <div className="text-center mt-12 md:mt-16 mb-0 md:mb-0">
+                <button onClick={() => setIsModalOpen(true)} className="text-slate-500 hover:text-[#68b13d] text-sm font-medium transition-colors border-b border-transparent hover:border-[#68b13d]">
+                अपनी खुद की फुल रेडी-मेड वेबसाइट चाहिए? हमसे संपर्क करें।
+                </button>
+            </div>
+
+        </div>
+      </main>
+
+      {/* MOBILE FIXED BOTTOM ACTION */}
+      <div className="absolute bottom-0 left-0 right-0 p-4 bg-white border-t border-slate-200 md:hidden z-40 shadow-[0_-5px_20px_rgba(0,0,0,0.05)]">
         <button 
             onClick={handleMobileAction}
             className={`w-full py-4 rounded-xl font-black text-lg shadow-lg flex items-center justify-center gap-2
@@ -314,27 +324,14 @@ export default function PricingPage() {
             `}
         >
             {selectedPlan === 'free' ? (
-                <>Access Demo <FaArrowRight /></>
+                <>डेमो देखें <FaArrowRight /></>
             ) : selectedPlan === 'starter' ? (
-                <>Get Starter ₹199</>
+                <>शुरू करें ₹199</>
             ) : (
-                <>Get AI Pro ₹399</>
+                <>शुरू करें ₹399</>
             )}
         </button>
       </div>
-
-          {/* Custom Plan Link */}
-            <div className="text-center mt-12 md:mt-16 mb-0 md:mb-0" >
-                <button className="text-slate-500 hover:text-[#68b13d] text-sm font-medium transition-colors border-b border-transparent hover:border-[#68b13d]" onClick={() => setIsModalOpen(true)}>
-                अपनी खुद की फुल रेडी-मेड वेबसाइट चाहिए? हमसे संपर्क करें।
-                </button>
-            </div>
-
-        </div>
-      </main>
-
-      {/* MOBILE FIXED BOTTOM ACTION */}
-    
 
 
       {/* FREE PLAN POPUP */}
@@ -345,82 +342,120 @@ export default function PricingPage() {
             onClick={() => setShowFreePopup(false)}
           />
           
-          <div className="relative w-full max-w-lg bg-white rounded-3xl p-8 shadow-2xl animate-in zoom-in-95 duration-300 overflow-hidden">
+          <div className="relative w-full max-w-2xl bg-white rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300 flex flex-col max-h-[90vh]">
             
-            <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-black text-slate-900">Demo website and Admin panel Access Details</h2>
-                <button onClick={() => setShowFreePopup(false)} className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200">
-                    ✕
+            {/* Header */}
+            <div className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold">
+                        <FaWandMagicSparkles />
+                    </div>
+                    <div>
+                        <h2 className="text-xl font-black text-slate-900 leading-tight">डेमो एक्सेस</h2>
+                        <p className="text-xs text-slate-500 font-medium">बिना पैसे दिए, खुद चलाकर देखें</p>
+                    </div>
+                </div>
+                <button 
+                    onClick={() => setShowFreePopup(false)} 
+                    className="w-8 h-8 rounded-full bg-slate-100 text-slate-400 hover:bg-slate-200 hover:text-slate-600 flex items-center justify-center transition-colors"
+                >
+                    <FaXmark />
                 </button>
             </div>
 
-            <div className="space-y-6">
-                {/* Website Link */}
-                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">blog Website Link</div>
-                    <div className="flex items-center gap-3">
-                        <a href="https://blogfly-syhl.vercel.app" target="_blank" rel="noopener noreferrer" className="flex-1 text-blue-600 font-medium truncate hover:underline">
-                            https://blogfly-syhl.vercel.app
-                        </a>
-                        <a href="https://blogfly-syhl.vercel.app" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-blue-600">
-                            <FaExternalLinkAlt />
-                        </a>
+            {/* Scrollable Content */}
+            <div className="p-6 overflow-y-auto custom-scrollbar space-y-8">
+                
+                {/* 1. Website Demo */}
+                <div className="space-y-3">
+                    <div className="flex items-center gap-2 mb-1">
+                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-xs font-bold">1</span>
+                        <h3 className="font-bold text-slate-900 text-sm uppercase tracking-wider">लाइव वेबसाइट डेमो</h3>
+                    </div>
+                    <div className="group relative p-4 bg-gradient-to-br from-blue-50 to-indigo-50/50 rounded-2xl border border-blue-100 hover:border-blue-200 transition-all">
+                        <div className="flex items-center justify-between gap-4">
+                            <div className="min-w-0">
+                                <div className="text-xs text-blue-600 font-bold mb-0.5">वेबसाइट लिंक</div>
+                                <a href="https://blogfly-syhl.vercel.app" target="_blank" rel="noopener noreferrer" className="text-slate-900 font-bold hover:text-blue-600 truncate block text-lg">
+                                https://blogfly-syhl.vercel.app
+                                </a>
+                            </div>
+                            <a 
+                                href="https://blogfly-syhl.vercel.app" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="shrink-0 px-4 py-2 bg-white text-blue-600 text-sm font-bold rounded-lg shadow-sm border border-blue-100 hover:bg-blue-50 transition-colors flex items-center gap-2"
+                            >
+                                क्लिक करें <FaExternalLinkAlt className="text-xs" />
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                {/* Admin Panel Link */}
-                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Admin Panel Link</div>
-                    <div className="flex items-center gap-3">
-                        <a href="https://blogfly-syhl.vercel.app/login" target="_blank" rel="noopener noreferrer" className="flex-1 text-blue-600 font-medium truncate hover:underline">
-                            https://blogfly-syhl.vercel.app/login
-                        </a>
-                        <a href="https://blogfly-syhl.vercel.app/login" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-blue-600">
-                            <FaExternalLinkAlt />
-                        </a>
+                {/* 2. Admin Panel Demo */}
+                <div className="space-y-3">
+                    <div className="flex items-center gap-2 mb-1">
+                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-purple-100 text-purple-600 text-xs font-bold">2</span>
+                        <h3 className="font-bold text-slate-900 text-sm uppercase tracking-wider">एडमिन पैनल डेमो</h3>
                     </div>
-                </div>
+                    
+                    <div className="bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                        {/* Link */}
+                        <div className="p-4 border-b border-slate-100 bg-white flex items-center justify-between gap-4">
+                            <div className="min-w-0">
+                                {/* <div className="text-xs text-purple-600 font-bold mb-0.5">लॉगिन लिंक</div> */}
+                                <a href="https://blogfly-syhl.vercel.app/admin/dashboard" target="_blank" rel="noopener noreferrer" className="text-slate-900 font-bold hover:text-purple-600 truncate block">
+                                    https://blogfly-syhl.vercel.app/admin/dashboard
+                                </a>
+                            </div>
+                            <a 
+                                href="https://blogfly-syhl.vercel.app/admin/dashboard" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="shrink-0  h-8 flex items-center justify-center bg-purple-50 text-purple-600 rounded-lg hover:bg-purple-100 transition-colors"
+                            >
+                                क्लिक करें <FaExternalLinkAlt className="text-xs ms-2" />
+                            </a>
+                        </div>
 
-                {/* Credentials */}
-                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Admin Login Credentials</div>
-                    <div className="grid grid-cols-1 gap-3">
-                        <div className="flex items-center justify-between bg-white p-3 rounded-lg border border-slate-200">
-                            <div>
-                                <div className="text-xs text-slate-400">Email</div>
-                                <div className="font-mono text-sm text-slate-700">admin@demo.com</div>
+                        {/* Credentials Grid */}
+                        {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-slate-100">
+                            <div className="bg-white p-4 group cursor-pointer" onClick={() => copyToClipboard('admin@demo.com')}>
+                                <div className="flex items-center justify-between mb-1">
+                                    <span className="text-xs font-bold text-slate-400 uppercase">Email / Username</span>
+                                    <FaCopy className="text-slate-300 group-hover:text-[#68b13d] transition-colors text-sm" />
+                                </div>
+                                <div className="font-mono text-slate-700 font-medium select-all">admin@demo.com</div>
                             </div>
-                            <button onClick={() => copyToClipboard('admin@demo.com')} className="text-slate-400 hover:text-slate-600">
-                                <FaCopy />
-                            </button>
-                        </div>
-                        <div className="flex items-center justify-between bg-white p-3 rounded-lg border border-slate-200">
-                            <div>
-                                <div className="text-xs text-slate-400">Password</div>
-                                <div className="font-mono text-sm text-slate-700">admin123</div>
+                            <div className="bg-white p-4 group cursor-pointer" onClick={() => copyToClipboard('admin123')}>
+                                <div className="flex items-center justify-between mb-1">
+                                    <span className="text-xs font-bold text-slate-400 uppercase">Password</span>
+                                    <FaCopy className="text-slate-300 group-hover:text-[#68b13d] transition-colors text-sm" />
+                                </div>
+                                <div className="font-mono text-slate-700 font-medium select-all">admin123</div>
                             </div>
-                            <button onClick={() => copyToClipboard('admin123')} className="text-slate-400 hover:text-slate-600">
-                                <FaCopy />
-                            </button>
-                        </div>
+                        </div> */}
                     </div>
+                      {/* <p className="text-xs text-slate-400 text-center px-4">
+                          💡 लॉगिन करने के लिए ऊपर दिए गए ईमेल और पासवर्ड का उपयोग करें।
+                      </p> */}
                 </div>
 
             </div>
 
-            <div className="mt-8">
+            {/* Footer Action */}
+            <div className="p-4 bg-slate-50 border-t border-slate-100">
                 <button
                   onClick={() => setShowFreePopup(false)}
-                  className="w-full py-4 rounded-xl bg-slate-900 text-white font-bold text-lg hover:bg-slate-800 transition-all"
+                  className="w-full py-3.5 rounded-xl bg-slate-900 text-white font-bold text-base hover:bg-slate-800 transition-all shadow-lg active:scale-[0.98]"
                 >
-                  Close
+                  समझ गया, धन्यवाद
                 </button>
             </div>
             
           </div>
         </div>
       )}
-
     </div>
   );
 }

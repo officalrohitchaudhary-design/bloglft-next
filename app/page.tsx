@@ -148,7 +148,10 @@ export default function V3() {
                      iframe.style.opacity = '1';
                      iframe.style.pointerEvents = 'auto';
                      // Reload iframe with autoplay to start video immediately
-                     iframe.src += "&autoplay=1"; 
+                     iframe.src += "&autoplay=1";
+                     
+                     // Hide this overlay div so it doesn't block interaction
+                     (e.currentTarget as HTMLElement).style.display = 'none';
                   }
                }}
             ></div>
@@ -534,16 +537,14 @@ export default function V3() {
       </section>
 
    {/* SECTION — CALENDLY CTA (Book Meeting) */}
-   <section className="py-8 px-4 sm:px-6">
+   {/* <section className="py-8 px-4 sm:px-6 ">
         <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[2.5rem] bg-[#006BFF] shadow-2xl shadow-blue-500/30 group hover:scale-[1.02] transition-transform duration-300">
           
-          {/* Animated Background Pattern */}
           <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
           <div className="absolute -left-20 -top-20 w-64 h-64 bg-white/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
           
           <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
             
-            {/* Text Content */}
             <div className="flex-1">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 text-white text-xs md:text-sm font-bold uppercase tracking-wider mb-4 border border-white/20">
                 <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
@@ -558,7 +559,6 @@ export default function V3() {
               </p>
             </div>
 
-            {/* CTA Button */}
             <div className="shrink-0">
               <a 
                 href="https://calendly.com/singhmak305/30min" // Replace with actual Calendly link
@@ -574,7 +574,7 @@ export default function V3() {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>
